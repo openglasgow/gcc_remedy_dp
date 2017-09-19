@@ -1,0 +1,7 @@
+*.swo
+.DS_Store
+.Python
+.remedy_venv/
+*.pyc
+config/
+*.swp

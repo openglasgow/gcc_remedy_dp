@@ -1,0 +1,290 @@
+2017-09-18 13:11:12,810 -- INFO: *** Batch extraction starting with batch size of 150, sleep time of 0, from 01-01-2000 to 01-01-2010.
+2017-09-18 13:11:12,813 -- INFO: Polling 01-01-2000 to 05-30-2000
+2017-09-18 13:11:12,816 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:11:26,982 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:11:26,983 -- INFO: Successfully polled api from 01-01-2000 to 05-30-2000 with 0 results
+2017-09-18 13:11:27,022 -- INFO: 0 cases written to the database
+2017-09-18 13:11:27,022 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:11:27,022 -- INFO: Polling 05-30-2000 to 10-27-2000
+2017-09-18 13:11:27,025 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:11:40,737 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:11:40,738 -- INFO: Successfully polled api from 05-30-2000 to 10-27-2000 with 0 results
+2017-09-18 13:11:40,747 -- INFO: 0 cases written to the database
+2017-09-18 13:11:40,747 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:11:40,747 -- INFO: Polling 10-27-2000 to 03-26-2001
+2017-09-18 13:11:40,749 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:11:54,878 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:11:54,879 -- INFO: Successfully polled api from 10-27-2000 to 03-26-2001 with 0 results
+2017-09-18 13:11:54,888 -- INFO: 0 cases written to the database
+2017-09-18 13:11:54,888 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:11:54,888 -- INFO: Polling 03-26-2001 to 08-23-2001
+2017-09-18 13:11:54,890 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:12:08,454 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:12:08,454 -- INFO: Successfully polled api from 03-26-2001 to 08-23-2001 with 0 results
+2017-09-18 13:12:08,464 -- INFO: 0 cases written to the database
+2017-09-18 13:12:08,464 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:12:08,464 -- INFO: Polling 08-23-2001 to 01-20-2002
+2017-09-18 13:12:08,466 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:12:22,517 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:12:22,517 -- INFO: Successfully polled api from 08-23-2001 to 01-20-2002 with 0 results
+2017-09-18 13:12:22,527 -- INFO: 0 cases written to the database
+2017-09-18 13:12:22,527 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:12:22,527 -- INFO: Polling 01-20-2002 to 06-19-2002
+2017-09-18 13:12:22,529 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:12:36,514 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:12:36,515 -- INFO: Successfully polled api from 01-20-2002 to 06-19-2002 with 0 results
+2017-09-18 13:12:36,524 -- INFO: 0 cases written to the database
+2017-09-18 13:12:36,524 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:12:36,524 -- INFO: Polling 06-19-2002 to 11-16-2002
+2017-09-18 13:12:36,526 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:12:50,043 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:12:50,043 -- INFO: Successfully polled api from 06-19-2002 to 11-16-2002 with 0 results
+2017-09-18 13:12:50,053 -- INFO: 0 cases written to the database
+2017-09-18 13:12:50,053 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:12:50,053 -- INFO: Polling 11-16-2002 to 04-15-2003
+2017-09-18 13:12:50,055 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:13:04,196 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:13:04,197 -- INFO: Successfully polled api from 11-16-2002 to 04-15-2003 with 0 results
+2017-09-18 13:13:04,206 -- INFO: 0 cases written to the database
+2017-09-18 13:13:04,206 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:13:04,206 -- INFO: Polling 04-15-2003 to 09-12-2003
+2017-09-18 13:13:04,208 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:13:17,714 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:13:17,715 -- INFO: Successfully polled api from 04-15-2003 to 09-12-2003 with 0 results
+2017-09-18 13:13:17,725 -- INFO: 0 cases written to the database
+2017-09-18 13:13:17,725 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:13:17,725 -- INFO: Polling 09-12-2003 to 02-09-2004
+2017-09-18 13:13:17,727 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:13:31,652 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:13:31,653 -- INFO: Successfully polled api from 09-12-2003 to 02-09-2004 with 3 results
+2017-09-18 13:13:31,672 -- INFO: 3 cases written to the database
+2017-09-18 13:13:31,672 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:13:31,672 -- INFO: Polling 02-09-2004 to 07-08-2004
+2017-09-18 13:13:31,673 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:13:45,583 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:13:45,584 -- INFO: Successfully polled api from 02-09-2004 to 07-08-2004 with 1 results
+2017-09-18 13:13:45,598 -- INFO: 1 cases written to the database
+2017-09-18 13:13:45,598 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:13:45,598 -- INFO: Polling 07-08-2004 to 12-05-2004
+2017-09-18 13:13:45,600 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:13:59,716 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:13:59,717 -- INFO: Successfully polled api from 07-08-2004 to 12-05-2004 with 0 results
+2017-09-18 13:13:59,726 -- INFO: 0 cases written to the database
+2017-09-18 13:13:59,726 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:13:59,726 -- INFO: Polling 12-05-2004 to 05-04-2005
+2017-09-18 13:13:59,728 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:14:14,446 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:14:14,447 -- INFO: Successfully polled api from 12-05-2004 to 05-04-2005 with 0 results
+2017-09-18 13:14:14,456 -- INFO: 0 cases written to the database
+2017-09-18 13:14:14,456 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:14:14,456 -- INFO: Polling 05-04-2005 to 10-01-2005
+2017-09-18 13:14:14,460 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:14:28,198 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:14:28,214 -- INFO: Successfully polled api from 05-04-2005 to 10-01-2005 with 179 results
+2017-09-18 13:14:28,352 -- INFO: 179 cases written to the database
+2017-09-18 13:14:28,352 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:14:28,352 -- INFO: Polling 10-01-2005 to 02-28-2006
+2017-09-18 13:14:28,354 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:14:42,527 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:14:42,528 -- INFO: Successfully polled api from 10-01-2005 to 02-28-2006 with 1 results
+2017-09-18 13:14:42,541 -- INFO: 1 cases written to the database
+2017-09-18 13:14:42,541 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:14:42,541 -- INFO: Polling 02-28-2006 to 07-28-2006
+2017-09-18 13:14:42,543 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:14:56,399 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:14:56,400 -- INFO: Successfully polled api from 02-28-2006 to 07-28-2006 with 1 results
+2017-09-18 13:14:56,414 -- INFO: 1 cases written to the database
+2017-09-18 13:14:56,414 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:14:56,414 -- INFO: Polling 07-28-2006 to 12-25-2006
+2017-09-18 13:14:56,415 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:15:10,361 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:15:10,363 -- INFO: Successfully polled api from 07-28-2006 to 12-25-2006 with 10 results
+2017-09-18 13:15:10,383 -- INFO: 10 cases written to the database
+2017-09-18 13:15:10,383 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:15:10,383 -- INFO: Polling 12-25-2006 to 05-24-2007
+2017-09-18 13:15:10,385 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:15:26,548 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:15:28,058 -- INFO: Successfully polled api from 12-25-2006 to 05-24-2007 with 16000 results
+2017-09-18 13:15:39,361 -- INFO: 16000 cases written to the database
+2017-09-18 13:15:39,361 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:15:39,361 -- INFO: Polling 05-24-2007 to 10-21-2007
+2017-09-18 13:15:39,363 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:15:55,975 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:15:57,812 -- INFO: Successfully polled api from 05-24-2007 to 10-21-2007 with 18504 results
+2017-09-18 13:16:10,779 -- INFO: 18504 cases written to the database
+2017-09-18 13:16:10,779 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:16:10,780 -- INFO: Polling 10-21-2007 to 03-19-2008
+2017-09-18 13:16:10,781 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:16:26,837 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:16:28,327 -- INFO: Successfully polled api from 10-21-2007 to 03-19-2008 with 15179 results
+2017-09-18 13:16:38,964 -- INFO: 15179 cases written to the database
+2017-09-18 13:16:38,965 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:16:38,965 -- INFO: Polling 03-19-2008 to 08-16-2008
+2017-09-18 13:16:38,966 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:16:54,108 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:16:55,041 -- INFO: Successfully polled api from 03-19-2008 to 08-16-2008 with 9386 results
+2017-09-18 13:17:01,681 -- INFO: 9386 cases written to the database
+2017-09-18 13:17:01,681 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:17:01,681 -- INFO: Polling 08-16-2008 to 01-13-2009
+2017-09-18 13:17:01,683 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:17:18,526 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:17:20,714 -- INFO: Successfully polled api from 08-16-2008 to 01-13-2009 with 21218 results
+2017-09-18 13:17:35,763 -- INFO: 21218 cases written to the database
+2017-09-18 13:17:35,763 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:17:35,763 -- INFO: Polling 01-13-2009 to 06-12-2009
+2017-09-18 13:17:35,765 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:17:50,901 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:17:52,138 -- INFO: Successfully polled api from 01-13-2009 to 06-12-2009 with 12546 results
+2017-09-18 13:18:00,945 -- INFO: 12546 cases written to the database
+2017-09-18 13:18:00,945 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:18:00,945 -- INFO: Polling 06-12-2009 to 11-09-2009
+2017-09-18 13:18:00,947 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:18:16,106 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:18:17,542 -- INFO: Successfully polled api from 06-12-2009 to 11-09-2009 with 14567 results
+2017-09-18 13:18:27,869 -- INFO: 14567 cases written to the database
+2017-09-18 13:18:27,869 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:18:27,869 -- INFO: Polling 11-09-2009 to 01-01-2010
+2017-09-18 13:18:27,871 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:18:42,973 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:18:44,160 -- INFO: Successfully polled api from 11-09-2009 to 01-01-2010 with 12275 results
+2017-09-18 13:18:52,787 -- INFO: 12275 cases written to the database
+2017-09-18 13:18:52,787 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:18:52,787 -- INFO: *** Batch extraction for 01-01-2000 to 01-01-2010 complete ***
+2017-09-18 13:19:25,811 -- INFO: *** Batch extraction starting with batch size of 150, sleep time of 0, from 01-01-2010 to 09-01-2017.
+2017-09-18 13:19:25,813 -- INFO: Polling 01-01-2010 to 05-31-2010
+2017-09-18 13:19:25,817 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:19:42,765 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:19:45,160 -- INFO: Successfully polled api from 01-01-2010 to 05-31-2010 with 25701 results
+2017-09-18 13:20:03,193 -- INFO: 25701 cases written to the database
+2017-09-18 13:20:03,193 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:20:03,193 -- INFO: Polling 05-31-2010 to 10-28-2010
+2017-09-18 13:20:03,195 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:20:19,273 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 13:20:21,328 -- INFO: Successfully polled api from 05-31-2010 to 10-28-2010 with 20600 results
+2017-09-18 13:20:35,691 -- INFO: 20600 cases written to the database
+2017-09-18 13:20:35,691 -- DEBUG: sleeping for 0 seconds
+2017-09-18 13:20:35,691 -- INFO: Polling 10-28-2010 to 03-27-2011
+2017-09-18 13:20:35,692 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:20:52,683 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 0
+2017-09-18 13:44:40,901 -- INFO: *** Batch extraction starting with batch size of 150, sleep time of 0, from 10-28-2010 to 09-01-2017.
+2017-09-18 13:44:40,904 -- INFO: Polling 10-28-2010 to 03-27-2011
+2017-09-18 13:44:40,907 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 13:45:01,335 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 0
+2017-09-18 14:05:57,213 -- INFO: *** Batch extraction starting with batch size of 150, sleep time of 0, from 10-28-2010 to 09-01-2017.
+2017-09-18 14:05:57,216 -- INFO: Polling 10-28-2010 to 03-27-2011
+2017-09-18 14:05:57,219 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:06:13,772 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 0
+2017-09-18 14:06:13,773 -- ERROR: <class 'xml.etree.ElementTree.ParseError'>
+2017-09-18 14:06:13,773 -- INFO: Polling 03-27-2011 to 08-24-2011
+2017-09-18 14:06:13,775 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:06:28,723 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 14:06:30,381 -- INFO: Successfully polled api from 03-27-2011 to 08-24-2011 with 17468 results
+2017-09-18 14:06:42,696 -- INFO: 17468 cases written to the database
+2017-09-18 14:06:42,696 -- DEBUG: sleeping for 0 seconds
+2017-09-18 14:06:42,697 -- INFO: Polling 08-24-2011 to 01-21-2012
+2017-09-18 14:06:42,698 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:06:59,274 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 14:07:02,102 -- INFO: Successfully polled api from 08-24-2011 to 01-21-2012 with 28441 results
+2017-09-18 14:07:22,131 -- INFO: 28441 cases written to the database
+2017-09-18 14:07:22,132 -- DEBUG: sleeping for 0 seconds
+2017-09-18 14:07:22,132 -- INFO: Polling 01-21-2012 to 06-19-2012
+2017-09-18 14:07:22,133 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:07:35,976 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 14:07:37,084 -- INFO: Successfully polled api from 01-21-2012 to 06-19-2012 with 11346 results
+2017-09-18 14:07:45,052 -- INFO: 11346 cases written to the database
+2017-09-18 14:07:45,053 -- DEBUG: sleeping for 0 seconds
+2017-09-18 14:07:45,053 -- INFO: Polling 06-19-2012 to 11-16-2012
+2017-09-18 14:07:45,054 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:07:57,565 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 14:07:57,995 -- INFO: Successfully polled api from 06-19-2012 to 11-16-2012 with 4474 results
+2017-09-18 14:08:01,181 -- INFO: 4474 cases written to the database
+2017-09-18 14:08:01,181 -- DEBUG: sleeping for 0 seconds
+2017-09-18 14:08:01,181 -- INFO: Polling 11-16-2012 to 04-15-2013
+2017-09-18 14:08:01,183 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:08:16,079 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 14:08:18,007 -- INFO: Successfully polled api from 11-16-2012 to 04-15-2013 with 20336 results
+2017-09-18 14:08:32,290 -- INFO: 20336 cases written to the database
+2017-09-18 14:08:32,290 -- DEBUG: sleeping for 0 seconds
+2017-09-18 14:08:32,290 -- INFO: Polling 04-15-2013 to 09-12-2013
+2017-09-18 14:08:32,292 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:08:47,104 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 14:08:48,762 -- INFO: Successfully polled api from 04-15-2013 to 09-12-2013 with 16950 results
+2017-09-18 14:09:00,677 -- INFO: 16950 cases written to the database
+2017-09-18 14:09:00,677 -- DEBUG: sleeping for 0 seconds
+2017-09-18 14:09:00,677 -- INFO: Polling 09-12-2013 to 02-09-2014
+2017-09-18 14:09:00,679 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:09:16,322 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 14:09:18,913 -- INFO: Successfully polled api from 09-12-2013 to 02-09-2014 with 26371 results
+2017-09-18 14:09:37,422 -- INFO: 26371 cases written to the database
+2017-09-18 14:09:37,422 -- DEBUG: sleeping for 0 seconds
+2017-09-18 14:09:37,422 -- INFO: Polling 02-09-2014 to 07-09-2014
+2017-09-18 14:09:37,424 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:09:50,933 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 14:09:52,478 -- INFO: Successfully polled api from 02-09-2014 to 07-09-2014 with 15759 results
+2017-09-18 14:10:03,576 -- INFO: 15759 cases written to the database
+2017-09-18 14:10:03,576 -- DEBUG: sleeping for 0 seconds
+2017-09-18 14:10:03,576 -- INFO: Polling 07-09-2014 to 12-06-2014
+2017-09-18 14:10:03,578 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:10:15,576 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 14:10:16,218 -- INFO: Successfully polled api from 07-09-2014 to 12-06-2014 with 6720 results
+2017-09-18 14:10:20,943 -- INFO: 6720 cases written to the database
+2017-09-18 14:10:20,943 -- DEBUG: sleeping for 0 seconds
+2017-09-18 14:10:20,943 -- INFO: Polling 12-06-2014 to 05-05-2015
+2017-09-18 14:10:20,945 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:10:33,436 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 14:10:34,748 -- INFO: Successfully polled api from 12-06-2014 to 05-05-2015 with 13736 results
+2017-09-18 14:10:44,385 -- INFO: 13736 cases written to the database
+2017-09-18 14:10:44,385 -- DEBUG: sleeping for 0 seconds
+2017-09-18 14:10:44,385 -- INFO: Polling 05-05-2015 to 10-02-2015
+2017-09-18 14:10:44,387 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:10:56,246 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 14:10:56,959 -- INFO: Successfully polled api from 05-05-2015 to 10-02-2015 with 7283 results
+2017-09-18 14:11:02,096 -- INFO: 7283 cases written to the database
+2017-09-18 14:11:02,096 -- DEBUG: sleeping for 0 seconds
+2017-09-18 14:11:02,096 -- INFO: Polling 10-02-2015 to 02-29-2016
+2017-09-18 14:11:02,098 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:11:15,456 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 14:11:17,133 -- INFO: Successfully polled api from 10-02-2015 to 02-29-2016 with 17211 results
+2017-09-18 14:11:29,242 -- INFO: 17211 cases written to the database
+2017-09-18 14:11:29,242 -- DEBUG: sleeping for 0 seconds
+2017-09-18 14:11:29,242 -- INFO: Polling 02-29-2016 to 07-28-2016
+2017-09-18 14:11:29,244 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:11:40,040 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 14:11:40,608 -- INFO: Successfully polled api from 02-29-2016 to 07-28-2016 with 5888 results
+2017-09-18 14:11:44,791 -- INFO: 5888 cases written to the database
+2017-09-18 14:11:44,791 -- DEBUG: sleeping for 0 seconds
+2017-09-18 14:11:44,791 -- INFO: Polling 07-28-2016 to 12-25-2016
+2017-09-18 14:11:44,793 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:11:56,503 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-18 14:11:57,441 -- INFO: Successfully polled api from 07-28-2016 to 12-25-2016 with 9587 results
+2017-09-18 14:12:04,306 -- INFO: 9587 cases written to the database
+2017-09-18 14:12:04,306 -- DEBUG: sleeping for 0 seconds
+2017-09-18 14:12:04,306 -- INFO: Polling 12-25-2016 to 05-24-2017
+2017-09-18 14:12:04,308 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:12:20,833 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 0
+2017-09-18 14:12:20,834 -- ERROR: <class 'xml.etree.ElementTree.ParseError'>
+2017-09-18 14:12:20,834 -- INFO: Polling 05-24-2017 to 09-01-2017
+2017-09-18 14:12:20,836 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-18 14:12:36,232 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 0
+2017-09-18 14:12:36,232 -- ERROR: <class 'xml.etree.ElementTree.ParseError'>
+2017-09-18 14:12:36,233 -- INFO: *** Batch extraction for 10-28-2010 to 09-01-2017 complete ***
+2017-09-19 10:28:47,152 -- INFO: *** Batch extraction starting with batch size of 150, sleep time of 0, from 09-01-2017 to 09-30-2017.
+2017-09-19 10:28:47,154 -- INFO: Polling 09-01-2017 to 09-30-2017
+2017-09-19 10:28:47,155 -- ERROR: <class 'FileNotFoundError'>
+2017-09-19 10:28:47,155 -- INFO: *** Batch extraction for 09-01-2017 to 09-30-2017 complete ***
+2017-09-19 10:29:46,268 -- INFO: *** Batch extraction starting with batch size of 150, sleep time of 0, from 09-01-2017 to 09-30-2017.
+2017-09-19 10:29:46,270 -- INFO: Polling 09-01-2017 to 09-30-2017
+2017-09-19 10:29:46,271 -- ERROR: <class 'FileNotFoundError'>
+2017-09-19 10:29:46,271 -- INFO: *** Batch extraction for 09-01-2017 to 09-30-2017 complete ***
+2017-09-19 10:31:16,705 -- INFO: *** Batch extraction starting with batch size of 150, sleep time of 0, from 09-01-2017 to 09-30-2017.
+2017-09-19 10:31:16,707 -- INFO: Polling 09-01-2017 to 09-30-2017
+2017-09-19 10:31:16,707 -- ERROR: <class 'FileNotFoundError'>
+2017-09-19 10:31:16,707 -- INFO: *** Batch extraction for 09-01-2017 to 09-30-2017 complete ***
+2017-09-19 10:32:28,911 -- INFO: *** Batch extraction starting with batch size of 150, sleep time of 0, from 09-01-2017 to 09-30-2017.
+2017-09-19 10:32:28,913 -- INFO: Polling 09-01-2017 to 09-30-2017
+2017-09-19 10:32:28,918 -- DEBUG: Starting new HTTP connection (1): iproxy1.glasgow.gov.uk
+2017-09-19 10:32:40,892 -- DEBUG: http://iproxy1.glasgow.gov.uk:1045 "POST http://hnsappass07s.glasgow.gov.uk:50700/dswsbobje/qaawsservices/biws?WSDL=1&cuid=FjpUXlkvFAEAWxMAAADn77_nAFBWt.7D HTTP/1.1" 200 None
+2017-09-19 10:32:41,751 -- INFO: Successfully polled api from 09-01-2017 to 09-30-2017 with 8784 results
+2017-09-19 10:32:48,425 -- INFO: 8784 cases written to the database
+2017-09-19 10:32:48,425 -- DEBUG: sleeping for 0 seconds
+2017-09-19 10:32:48,426 -- INFO: *** Batch extraction for 09-01-2017 to 09-30-2017 complete ***
