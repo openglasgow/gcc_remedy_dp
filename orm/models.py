@@ -15,8 +15,9 @@ Base = declarative_base()
 #created_at -> datetime
 #updated_at -> datetime
 
-class RemedyCase(Base):
-    __tablename__ = 'remedy_cases'
+class ComplaintCase(Base):
+
+    __tablename__ = 'complaint_cases'
     id=Column(Integer, primary_key=True)
     assigned_to = Column(String)
     call_closed_date_time_bst = Column(DateTime)
@@ -43,7 +44,7 @@ class RemedyCase(Base):
     uprn = Column(String)
     ward = Column(String)
     def __repr__(self):
-        return "<RemedyCase(id = '%s', assigned='%s', topic='%s'>" % \
+        return "<ComplaintCase(id = '%s', assigned='%s', topic='%s'>" % \
                (self.id, self.assigned_to, self.call_topic_category_1)
 
 ### Get or create object
