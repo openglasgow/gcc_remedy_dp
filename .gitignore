@@ -1,3 +1,5 @@
+logs/
+dumps/
 *.swo
 .DS_Store
 .Python

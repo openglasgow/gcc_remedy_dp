@@ -42,4 +42,34 @@ Installation and usage
 	$ python remedy_to_db.py sd 01-01-2017 -ed 01-30-2017 -b 5 -s 5
 	$ tail -f remedy_to_db.log
 	``` 
+Tunnel config
+---
+This is the local setup to allow you connect to the remote azure psql instance. There are two components:
 
+1. An ssh tunnel that connects to an intermediary vitual machine on Azure that can connect to a managed PSQL instance
+2. An SSL tunnel that sits in front of the SSH tunnel and encrypts the connection through the tunnel, allowing you to connect to the remote PSQL instance which requires SSL connections, without having to configure the client, which can be tricky. 
+
+This is accomplished by setting up the ssh tunnel, installing and configuring stunnel, a service that sets up encrypted tunnels itself, and connecting to the remote database. You'll need passwords for the tunnel and the psql server. 
+
+1. setup ssh tunnel to the remote server
+
+	```
+	  $ ssh -L 5555:devpgsql.postgres.database.azure.com:5432 gccdatauser@51.140.47.78 -N -vvv
+	```
+
+2. install stunnel
+	
+	On a mac:
+	```
+	$ brew install stunnel
+	$ cd repo-directory && cp config/stunnel.conf /usr/local/etc/stunnel/stunnel.conf
+	```
+	On linux:
+	```
+	$ sudo apt-get install stunnel4
+	$ cd repo_directory && cp config/stunnel.conf /etc/stunnel/stunnel.conf
+	``` 
+3. Connect to the psql instance
+
+	```
+	$ psql -h localhost -p 5556 -U gccadminuser@devpgsql -d gcc-dev-foi 
