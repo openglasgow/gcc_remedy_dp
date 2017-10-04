@@ -1,6 +1,3 @@
-from orm.orm import db_connect, create_tables, Base
-from orm.models import *
-from sqlalchemy.orm import sessionmaker
 from datetime import datetime, timedelta, timezone, time
 from time import sleep
 from poll_remedy_api import get_wsdl_payload, config_wsdl_payload, send_request, parse_xml 
@@ -9,17 +6,11 @@ import argparse
 import sys
 from config.api_settings import settings
 import importlib
+from util import *
 
 ### logging config
-logging.basicConfig(filename="logs/remedy_to_db.log", level=logging.DEBUG, format='%(asctime)s -- %(levelname)s: %(message)s')
-
-## setup connection
-def gen_session():
-    engine = db_connect()
-    create_tables(engine, Base)
-    Session = sessionmaker(bind=engine)
-    session = Session()
-    return(session)
+setup_logger('extraction_logger', 'logs/extraction.log', logging.DEBUG)
+extraction_logger = logging.getLogger('extraction_logger')
 
 def poll_api(api="live", start_date=datetime.strftime(datetime.today() - timedelta(days = 1), '%m-%d-%Y'), end_date=datetime.strftime(datetime.today(), '%m-%d-%Y')):
     ### Get response from api
@@ -91,35 +82,34 @@ def batch_dates(start_date = "09-01-2017", end_date= "09-01-2017", batch_size=3)
     return(dates_list)
 
 def api_extractor(api="live", batch_size=3, sleep_time = 3,  start_date = "01-01-2017", end_date="01-02-2017"):
-    logging.info("*** Batch extraction starting with batch size of %s, sleep time of %s, from %s to %s." %(batch_size, sleep_time, start_date, end_date))
+    extraction_logger.info("*** Batch extraction starting with batch size of %s, sleep time of %s, from %s to %s." %(batch_size, sleep_time, start_date, end_date))
     ### Generate a tuple of date ranges, then for each one
     dates_list = batch_dates(start_date, end_date, batch_size)
     ### iterate through the batch dates and put the results in the db
     for date_range in dates_list:
-        logging.info("Polling %s to %s" % (date_range[0], date_range[1]))
+        extraction_logger.info("Polling %s to %s" % (date_range[0], date_range[1]))
         ### poll the current date range for cases
         try:
             response = poll_api(api, date_range[0], date_range[1])
-            logging.info("Successfully polled api from %s to %s with %s results"%(date_range[0], date_range[1], response["meta"]["length"]))
+            extraction_logger.info("Successfully polled api from %s to %s with %s results"%(date_range[0], date_range[1], response["meta"]["length"]))
         except:
-            logging.error(str(sys.exc_info()[0]) + "Thrown from api_extractor")
+            extraction_logger.error(str(sys.exc_info()[0]) + "Thrown from api_extractor")
             ### skip to next iteration
             continue
         ### if the api read worked send them to db
         db_result = response_to_db(api, response)
         if db_result[0]:
             ### Everything went ok
-            logging.info(db_result[1])
+            extraction_logger.info(db_result[1])
         else:
             ### There was an error
-            logging.error(db_result[1] + "thrown from api_extractor")
-        logging.debug("sleeping for %s seconds" % (sleep_time))
+            extraction_logger.error(db_result[1] + "thrown from api_extractor")
+        extraction_logger.debug("sleeping for %s seconds" % (sleep_time))
         sleep(sleep_time)
-    logging.info("*** Batch extraction for %s to %s complete ***" % (start_date, end_date))
+    extraction_logger.info("*** Batch extraction for %s to %s complete ***" % (start_date, end_date))
     return(True)
 
 if __name__ == "__main__":
-
     ### Set up cli arguments
     parser = argparse.ArgumentParser()
     parser.add_argument("-a", "-api", dest="api", default="live", required=True, help="select api from live, complaints or archive")

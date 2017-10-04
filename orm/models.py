@@ -163,6 +163,8 @@ class ArchiveCase(Base):
     def __repr__(self):
         return "<ArchiveCase(id = '%s', assigned='%s', topic='%s'>" % \
                (self.id, self.assigned_to, self.call_topic_category_1)
+
+
 ### Get or create object
 def get_or_create(session, model, **kwargs):
     instance = session.query(model).filter_by(**kwargs).first()

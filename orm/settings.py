@@ -1,12 +1,15 @@
 import os
 from sqlalchemy.engine.url import URL
 ### Set this to default to development
-os.environ['ENV'] = "development"
 
-## Dev settings
-if os.environ['ENV'] == "development":
-    ### Set up database 
-    DATABASE = {
+### Try to get environment variables for connection
+try:
+    remote_pass = os.environ['AZURE_PSQL_PASS']
+except:
+    remote_pass = None
+
+connections = {
+        "local":{
             'drivername': 'postgres',
             'host': 'localhost',
             'port': '5432',
@@ -14,22 +17,19 @@ if os.environ['ENV'] == "development":
             'password': '',
             'database': 'remedy',
             'query': {'client_encoding': 'utf8'}}
-## Docker settings
-if os.environ['ENV'] == "docker":
-    ### Set up database 
-    DATABASE = {
+,
+        "remote":{
             'drivername': 'postgres',
-            'host': '67.207.84.204',
-            'port': '5432',
-            'username': 'gcc_data',
-            'password': os.environ['PG_PASS'],
-            'database': 'remedy'}
-    ### TODO More docker specific settings here
+            'host': 'localhost',
+            'port': '5556',
+            'username': 'gccadminuser@devpgsql',
+            'password': remote_pass, 
+            'database': 'gcc-dev-foi',
+            'query': {'client_encoding': 'utf8'}}
 
-
+        }
 
 ### Set environment variables
-os.environ['POSTGRES_URL'] = str(URL(**DATABASE))
 ECHO = False
 
 ### App settings
