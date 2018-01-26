@@ -5,18 +5,15 @@ from sqlalchemy.engine.url import URL
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-from orm import settings
+from config import db_settings
 from orm.models import *
 
-def db_connect(connection_name="local"):
+def db_connect(connection):
     """
-    Connects to the database from settings
+    Connects to the database
     """
-    try:
-        url = str(URL(**settings.connections[connection_name]))
-    except KeyError:
-        print("No connection with that name found in the settings file - orm/settings.py")
-    return create_engine(url, echo=settings.ECHO, client_encoding='utf8')
+    url = URL(**db_settings.connections[connection])
+    return create_engine(url, echo=db_settings.ECHO, client_encoding='utf8')
 
 def create_tables(engine, base):
     """
