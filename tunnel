@@ -1,0 +1,45 @@
+#!/bin/bash
+
+close_tunnel(){
+    # Get pid of SSH process
+    SSH_PID=$(ps -e | grep '[s]sh -L' |  awk {'print$1'})
+    # If its not empty then close it
+    if [ -z "$SSH_PID" ]
+        then   
+            echo "no ssh process running"
+            :
+        else   
+            kill $SSH_PID
+    fi
+
+    STUNNEL_PID=$(ps -e | grep '[s]tunnel' |  awk {'print$1'})
+    # If its not empty then close it
+    if [ -z "$SSH_PID" ]
+        then   
+            echo "no stunnel process running"
+            :
+        else   
+            kill $STUNNEL_PID
+    fi
+}
+
+open_tunnel(){
+    close_tunnel
+    
+    ssh -L 5555:devpgsql.postgres.database.azure.com:5432 -i ~/.ssh/gcc_dw_azure gccdatauser@data-science-vm-linux-ip.uksouth.cloudapp.azure.com -N -vvv >logs/tunnel.log 2>&1 & echo $!
+    stunnel & echo $!
+
+}
+
+# Main command
+if [ "$1" = "open" ]
+then
+    open_tunnel
+elif [ "$1" = "close" ]
+then
+    close_tunnel
+else
+    echo "This script expects the arguments open or close "
+fi
+
+

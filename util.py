@@ -4,6 +4,7 @@ from orm.orm import db_connect, create_tables, Base
 from orm.models import *
 from sqlalchemy.orm import sessionmaker
 from datetime import datetime, timedelta, timezone, time
+import subprocess
 
 def gen_session(connection):
     '''
@@ -83,6 +84,10 @@ def get_model_obj(api, row):
     elif api == "remedy":
         obj = RemedyCase(**row)
     return(obj)
+
+## Open / Close tunnel
+def tunnel(command):
+    return(subprocess.call(['./tunnel', '{}'.format(command)]))
 
 
 ## Set up metadata

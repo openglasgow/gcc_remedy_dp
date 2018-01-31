@@ -3,7 +3,7 @@ dumps/
 *.swo
 .DS_Store
 .Python
-.remedy_venv/
+.api_poll_venv/
 *.pyc
 config/
 *.swp
