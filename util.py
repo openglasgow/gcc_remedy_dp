@@ -50,13 +50,14 @@ def batch_dates(start_time = "09-01-2017 00:00:00 AM", end_time= "09-01-2017 00:
 
     # If its within the same day
     if top_next > tail_first:
-        return((start_time, end_time))
+        return([(start_time, end_time)])
 
-    # If the difference is less than the batch size
-    if (end_datetime - start_datetime).days == 1:
-        return((top, tail))
-
-
+    # If the difference is less than 24 hours
+    if (end_datetime - start_datetime).total_seconds() // 3600 <= 24:
+        if tail[0] == tail[1]:
+            return([top])
+        else:
+            return([top, tail])
 
     ### set up vars
     start_date = datetime.strptime(top_next, "%m-%d-%Y %H:%M:%S %p")
@@ -69,7 +70,10 @@ def batch_dates(start_time = "09-01-2017 00:00:00 AM", end_time= "09-01-2017 00:
     ### if the start and end dates are smaller than batch size, just return start and end dates
     if difftime_days <= batch_size:
         dates_list = [(start_date.strftime("%m-%d-%Y %H:%M:%S %p"), end_date.strftime("%m-%d-%Y %H:%M:%S %p"))]
-        return([top]+dates_list+[tail])
+        if tail[0] == tail[1]:
+            return([top]+dates_list)
+        else:
+            return([top]+dates_list+[tail])
     
     ### Otherwise build a list with a sequence of dates 
     diffdates_list = [batch_size for i in range(0, int((difftime_days-days_remainder)/batch_size))]
@@ -78,7 +82,10 @@ def batch_dates(start_time = "09-01-2017 00:00:00 AM", end_time= "09-01-2017 00:
     if days_remainder > 0:
         dates_list.append((dates_list[-1][1], (datetime.strptime(dates_list[-1][1], "%m-%d-%Y %H:%M:%S %p") + timedelta(days = days_remainder)).strftime("%m-%d-%Y %H:%M:%S %p")))
 
-    return([top]+dates_list+[tail])
+    if tail[0] == tail[1]:
+        return([top]+dates_list)
+    else:
+        return([top]+dates_list+[tail])
 
 def beginning_of_day(date_obj):
     return(datetime.combine(date_obj, time()))
