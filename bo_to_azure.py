@@ -17,3 +17,7 @@ def get_date_query_range(api='remedy'):
   '''
   tunnel('open')
   rs = gen_session('remote')
+  # Query
+  last_record_date = rs.query(RemedyCase.call_opened_date).order_by(RemedyCase.call_opened_date.desc()).limit(1)[0]
+  time_now = datetime.now()
+  format_string = '%d-%m-%Y %H:%M:%S %p'

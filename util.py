@@ -5,6 +5,7 @@ from orm.models import *
 from sqlalchemy.orm import sessionmaker
 from datetime import datetime, timedelta, timezone, time
 import subprocess
+from dateutil.parser import parser
 
 def gen_session(connection):
     '''
@@ -32,29 +33,55 @@ def setup_logger(logger_name, log_file, level=logging.INFO):
     l.addHandler(streamHandler)
 
 
-def batch_dates(start_date = "09-01-2017", end_date= "09-01-2017", batch_size=3):
+def batch_dates(start_time = "09-01-2017 00:00:00 AM", end_time= "09-01-2017 00:00:00 AM", batch_size=2):
     '''
     Neatly splits up date ranges into a list of tuples representing
     start and end time for each batch range, truncates at the end if its not even. 
     '''
+    ### Set up necessary vars for top tail
+    start_datetime = datetime.strptime(start_time, "%m-%d-%Y %H:%M:%S %p")
+    end_datetime = datetime.strptime(end_time, "%m-%d-%Y %H:%M:%S %p")
+
+    top_next = beginning_of_day(start_datetime + timedelta(days=1)).strftime("%m-%d-%Y %H:%M:%S %p")
+    top = (start_time, top_next)
+    
+    tail_first = beginning_of_day(end_datetime).strftime("%m-%d-%Y %H:%M:%S %p")
+    tail = (tail_first, end_time)
+
+    # If its within the same day
+    if top_next > tail_first:
+        return((start_time, end_time))
+
+    # If the difference is less than the batch size
+    if (end_datetime - start_datetime).days == 1:
+        return((top, tail))
+
+
+
     ### set up vars
-    start_date = datetime.strptime(start_date, "%m-%d-%Y")
-    end_date = datetime.strptime(end_date, "%m-%d-%Y")
+    start_date = datetime.strptime(top_next, "%m-%d-%Y %H:%M:%S %p")
+    end_date = datetime.strptime(tail_first, "%m-%d-%Y %H:%M:%S %p")
+    
+
     difftime_days = (end_date - start_date).days
     days_remainder = difftime_days % batch_size
+
     ### if the start and end dates are smaller than batch size, just return start and end dates
     if difftime_days <= batch_size:
-        dates_list = [(start_date.strftime("%m-%d-%Y"), end_date.strftime("%m-%d-%Y"))]
-        return(dates_list)
+        dates_list = [(start_date.strftime("%m-%d-%Y %H:%M:%S %p"), end_date.strftime("%m-%d-%Y %H:%M:%S %p"))]
+        return([top]+dates_list+[tail])
+    
     ### Otherwise build a list with a sequence of dates 
     diffdates_list = [batch_size for i in range(0, int((difftime_days-days_remainder)/batch_size))]
-    dates_list = [((start_date + timedelta(days = i*diffdates_list[i])).strftime("%m-%d-%Y"), (start_date + timedelta(days = i*diffdates_list[i]+batch_size)).strftime("%m-%d-%Y")) for i in range(0, len(diffdates_list))]
+    dates_list = [((start_date + timedelta(days = i*diffdates_list[i])).strftime("%m-%d-%Y %H:%M:%S %p"), (start_date + timedelta(days = i*diffdates_list[i]+batch_size)).strftime("%m-%d-%Y %H:%M:%S %p")) for i in range(0, len(diffdates_list))]
     #add a remainder if there is one
     if days_remainder > 0:
-        dates_list.append((dates_list[-1][1], (datetime.strptime(dates_list[-1][1], "%m-%d-%Y") + timedelta(days = days_remainder)).strftime("%m-%d-%Y")))
+        dates_list.append((dates_list[-1][1], (datetime.strptime(dates_list[-1][1], "%m-%d-%Y %H:%M:%S %p") + timedelta(days = days_remainder)).strftime("%m-%d-%Y %H:%M:%S %p")))
 
-    return(dates_list)
+    return([top]+dates_list+[tail])
 
+def beginning_of_day(date_obj):
+    return(datetime.combine(date_obj, time()))
 
 def parse_dates(row, field_list, parse_string = "%Y-%m-%dT%H:%M:%S.%f"):
     '''

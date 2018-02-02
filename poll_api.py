@@ -11,7 +11,7 @@ def get_wsdl_payload(api):
     xml_string = open(settings[api]["filename"], 'r+').read()
     return(xml_string)
 
-def config_wsdl_payload(xml_string, api="live",  from_date = "08-01-2017", to_date="08-04-2017"):
+def config_wsdl_payload(xml_string, api="remedy",  from_date = "08-01-2017", to_date="08-04-2017"):
     parsed_xml = etree.fromstring(xml_string)
     #update from date
     parsed_xml.findall(".//{%s}%s" % (settings[api]['namespace'], settings[api]['start_selector']))[0].text = from_date
