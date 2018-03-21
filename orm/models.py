@@ -7,14 +7,6 @@ from sqlalchemy.ext.declarative import declarative_base
 # initialize DeclarativeBase for the models
 Base = declarative_base()
 
-#id -> integer
-#title -> string
-#type -> string
-#reference -> string
-#fc_affiliate_key -> string
-#created_at -> datetime
-#updated_at -> datetime
-
 class RemedyCase(Base):
     __tablename__ = 'remedy_cases'
     id = Column(Integer, primary_key=True)
@@ -269,8 +261,8 @@ class ArchiveCase(Base):
                (self.id, self.assigned_to, self.call_topic_category_1)
 
 
-class LiveCase(Base):
-    __tablename__ = 'live_cases'
+class RemedyTest(Base):
+    __tablename__ = 'remedy_test'
     id = Column(Integer, primary_key=True)
     property_type = Column(String)
     agency_ref = Column(String)
@@ -373,6 +365,11 @@ class LiveCase(Base):
     utility = Column(String)
     payment_authorised_received = Column(String)
     niv_grading = Column(String)
+    original_request_id = Column(String)
+    original_create_date = Column(DateTime)
+    original_create_date_bst = Column(DateTime)
+    original_create_time = Column(DateTime)
+    original_create_time_bst = Column(DateTime)
     contact_premise_no = Column(String)
     contact_premise_name = Column(String)
     uprn = Column(String)
@@ -397,14 +394,12 @@ class LiveCase(Base):
     product_type = Column(String)
     summary = Column(String)
     def __repr__(self):
-        return "<TestCase(id = '%s', assigned='%s', topic='%s'>" % \
+        return "<RemedyTest(id = '%s', assigned='%s', topic='%s'>" % \
                (self.id, self.assigned_to, self.call_topic_category_1)
 
-class TestCase(Base):
-    __tablename__ = 'test_cases'
+class ArchiveTest(Base):
+    __tablename__ = 'archive_test'
     id = Column(Integer, primary_key=True)
-    property_type = Column(String)
-    agency_ref = Column(String)
     assignment_officer = Column(String)
     call_id = Column(String)
     call_type = Column(String)
@@ -461,7 +456,6 @@ class TestCase(Base):
     service_add_phone = Column(String)
     contact_add_town = Column(String)
     service_address = Column(String)
-    service_add_post_code = Column(String)
     request_status = Column(String)
     usrn = Column(String)
     date_time_last_modified = Column(DateTime)
@@ -503,32 +497,21 @@ class TestCase(Base):
     time_taken = Column(DateTime)
     utility = Column(String)
     payment_authorised_received = Column(String)
-    niv_grading = Column(String)
+    original_request_id = Column(String)
+    original_create_date = Column(DateTime)
+    original_create_date_bst = Column(DateTime)
+    original_create_time = Column(DateTime)
+    original_create_time_bst = Column(DateTime)
     contact_premise_no = Column(String)
     contact_premise_name = Column(String)
     uprn = Column(String)
-    opt_out_reason = Column(String)
-    other_reason = Column(String)
-    calendar_code = Column(String)
     number_completed = Column(String)
-    dangerous_defect = Column(String)
-    avoiding_action = Column(String)
     caller_title = Column(String)
     caller_first_name = Column(String)
     caller_second_name = Column(String)
     status_code  = Column(String)
-    care_group = Column(String)
-    make = Column(String)
-    permit_zone = Column(String)
-    vrm = Column(String)
-    request_printed = Column(String)
-    mcs_call_assignment = Column(String)
-    opening_hours = Column(String)
-    contact_mobile = Column(String)
-    product_type = Column(String)
-    summary = Column(String)
     def __repr__(self):
-        return "<TestCase(id = '%s', assigned='%s', topic='%s'>" % \
+        return "<ArchiveTest(id = '%s', assigned='%s', topic='%s'>" % \
                (self.id, self.assigned_to, self.call_topic_category_1)
 
 ### Get or create object

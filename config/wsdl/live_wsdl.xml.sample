@@ -1,0 +1,24 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cle="RemedyLiveAll">
+   <soapenv:Header>
+      <cle:QaaWSHeader>
+         <!--Optional:-->
+         <cle:sessionID>?</cle:sessionID>
+         <!--Optional:-->
+         <cle:serializedSession>?</cle:serializedSession>
+         <!--Optional:-->
+         <cle:ClientType>?</cle:ClientType>
+         <!--Optional:-->
+         <cle:AuditingObjectID>?</cle:AuditingObjectID>
+         <!--Optional:-->
+         <cle:AuditingObjectName>?</cle:AuditingObjectName>
+      </cle:QaaWSHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <cle:runQueryAsAService>
+         <cle:login>QaaWSCreator</cle:login>
+         <cle:password>SAMPLE_PASSWORD</cle:password>
+         <cle:Enter_value_s__for__Call_Opened_Time___End_>01-04-2017</cle:Enter_value_s__for__Call_Opened_Time___End_>
+         <cle:Enter_value_s__for__Call_Opened_Time___Start_>01-01-2016</cle:Enter_value_s__for__Call_Opened_Time___Start_>
+      </cle:runQueryAsAService>
+   </soapenv:Body>
+</soapenv:Envelope>

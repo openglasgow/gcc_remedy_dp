@@ -1,9 +1,14 @@
-logs/
+logs/*
 dumps/
 *.swo
 .DS_Store
 .Python
 .api_poll_venv/
 *.pyc
-config/
+config/*
+!config/*.sample
+!config/wsdl/
+config/wsdl/*
+!config/wsdl/*.sample
 *.swp
+__pycache__

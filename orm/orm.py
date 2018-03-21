@@ -5,15 +5,15 @@ from sqlalchemy.engine.url import URL
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-from config import db_settings
+from config.settings import connections, ECHO
 from orm.models import *
 
 def db_connect(connection):
     """
     Connects to the database
     """
-    url = URL(**db_settings.connections[connection])
-    return create_engine(url, echo=db_settings.ECHO, client_encoding='utf8')
+    url = URL(**connections[connection])
+    return create_engine(url, echo=ECHO, client_encoding='utf8')
 
 def create_tables(engine, base):
     """
