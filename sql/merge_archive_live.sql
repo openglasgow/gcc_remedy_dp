@@ -44,8 +44,8 @@ INSERT INTO merged_cases (property_type, agency_ref, assignment_officer, call_id
 
 
 -- Check against remedy_cases
-select merged.month, merged_count, remedy_count from (select date_trunc('month', call_opened_date_time) "month", count(*) merged_count from merged_cases group by month order by month desc) as merged
-INNER JOIN (select date_trunc('month', call_opened_date_time) "month", count(*) remedy_count from remedy_cases group by month order by month desc) as remedy on merged.month=remedy.month;
+select merged.month, merged_count, remedy_count from (select date_trunc('month', call_opened_date_time) "month", count(*) merged_count from (select distinct call_id, call_opened_date_time from merged_cases) as sq1 group by month order by month desc) as merged
+INNER JOIN (select date_trunc('month', call_opened_date_time) "month", count(*) remedy_count from (select distinct call_id, call_opened_date_time from remedy_cases) as sq2 group by month order by month desc) as remedy on merged.month=remedy.month;
 
 
 

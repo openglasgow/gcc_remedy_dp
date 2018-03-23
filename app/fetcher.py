@@ -4,29 +4,27 @@ import requests
 import re
 from config.settings import api_settings, fetch_date_format
 from datetime import datetime, timedelta
-from .util import setup_logger
+from .util import Util
 
 class BoFetcher(object):
   def __init__(self, api, from_datetime, to_datetime, date_format=fetch_date_format, settings=api_settings, logger=None):
     self.settings = settings
     self.api = api
     self.date_format = date_format
-    self.from_datetime = from_datetime
-    self.to_datetime = to_datetime
-    ## Validate date and api key
-    try: 
-      datetime.strptime(self.from_datetime, date_format)
-      datetime.strptime(self.to_datetime, date_format)
-    except ValueError:
-      raise ValueError("Dates not formatted correctly, use the format \"{}\"".format(self.date_format))
+    self.from_datetime = Util().validate_date("fetch", from_datetime)
+    self.to_datetime = Util().validate_date("fetch", to_datetime)
+    
+    ## Validate api key
     try:
       self.conf = self.settings[self.api]
       self.wsdl_payload = self.set_wsdl_payload()
     except KeyError:
       raise KeyError("api key \"{}\" not found in settings".format(self.api))
+    
     ## Configure payload
     self.wsdl_payload = self.config_wsdl_payload()
     self.logger = logger
+    # Validate dates
 
   def set_wsdl_payload(self):
       xml_string = open(self.conf["filename"], 'r+').read()
@@ -45,15 +43,18 @@ class BoFetcher(object):
 
   def send_request(self):
       headers = {'content-type': 'text/xml'}
+      # TODO - logging
       # self.logger("Sending request to BO api {} with dates {} to {}".format(self.api, self.from_datetime, self.to_datetime))
       try:
         response = requests.post(self.conf['url'], data=self.wsdl_payload, headers=headers).content
       except:
         e = sys.exc_info()[0]
+        # TODO - logging
         raise e("Problem fetching the request")
       try:
         parsed_response = self.parse_response(response)
       except:
+        # TODO - logging
         e = sys.exc_info()[0]
         raise e("Problem with parsing the response")
       
@@ -65,6 +66,7 @@ class BoFetcher(object):
                               "url": self.conf['url']
                               }, 
                      "data" : parsed_response}
+      # TODO - logging
       self.response = parsed_response
       return(True)
 
@@ -82,19 +84,19 @@ class BoFetcher(object):
          id = row.findall('./{{{}}}{}'.format(self.conf['namespace'], self.conf['row_id']))[0].text
          parsed_rows[id] = row_dict
 
-     
+     # TODO - logging
      return(parsed_rows)
 
-  def poll_api(api="live", start_date=datetime.strftime(datetime.today() - timedelta(days = 1), '%m-%d-%Y'), end_date=datetime.strftime(datetime.today(), '%m-%d-%Y')):
-      ### Get response from api
-      xml_query_payload = get_wsdl_payload(api)
-      configured_payload = config_wsdl_payload(xml_query_payload, api, start_date, end_date)
-      response = send_request(settings[api]["url"], configured_payload)
-      ### TODO do some error checking of the response
-      parsed_response = parse_xml(api, response)
-      parsed_response['meta']['start_date'] = start_date
-      parsed_response['meta']['end_date'] = end_date
-      return(parsed_response)
+  # def poll_api(api="live", start_date=datetime.strftime(datetime.today() - timedelta(days = 1), '%m-%d-%Y'), end_date=datetime.strftime(datetime.today(), '%m-%d-%Y')):
+  #     ### Get response from api
+  #     xml_query_payload = get_wsdl_payload(api)
+  #     configured_payload = config_wsdl_payload(xml_query_payload, api, start_date, end_date)
+  #     response = send_request(settings[api]["url"], configured_payload)
+  #     ### TODO do some error checking of the response
+  #     parsed_response = parse_xml(api, response)
+  #     parsed_response['meta']['start_date'] = start_date
+  #     parsed_response['meta']['end_date'] = end_date
+  #     return(parsed_response)
 
 
 # if __name__ == "__main__":
