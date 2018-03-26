@@ -6,6 +6,7 @@ dumps/
 .api_poll_venv/
 *.pyc
 config/*
+!config/settings.py
 !config/*.sample
 !config/wsdl/
 config/wsdl/*
