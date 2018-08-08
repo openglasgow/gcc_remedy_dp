@@ -30,11 +30,11 @@ Installation and usage
   - BoCrawler sets up a date range to traverse, DB connections, and traverses the date range filling in data
   - BoCrawler can crawl between two date ranges, or do a 'delta' search, which takes the date of the latest entry of in the DB as start, and time now as end. 
 6. Typical flow in python console
-  `from orm.models import *`
-  `from BoCrawler import *`
-  `crawler = BoCrawler('remedy_update', 'local', RemedyCase, delta=True)`
-  `crawler.crawl()`
-
+  ```from orm.models import *
+  from BoCrawler import *
+  crawler = BoCrawler('remedy_update', 'local', RemedyCase, delta=True)
+  crawler.crawl()
+  ```
 
 
 
