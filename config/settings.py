@@ -24,8 +24,8 @@ api_settings = {
                     "namespace":"RemedyLiveAll",
                     "row_selector":"row",
                     "row_id": "Call_Id",
-                    "start": "Enter_value_s__for__Call_Opened_Date___Start_",
-                    "end": "Enter_value_s__for__Call_Opened_Date___End_",
+                    "start": "Enter_value_s__for__Call_Opened_Time___Start_",
+                    "end": "Enter_value_s__for__Call_Opened_Time___End_",
                     "date_fields":['bulk_uplift_date','est_resp_date','est_resp_date_bst','date_1st_contact_made','date_1st_contact_made_bst','date_paid','date_paid_bst','call_opened_date','call_opened_date_bst','call_opened_date_time','call_opened_time','call_opened_date_time_bst','call_opened_time_bst','call_closed_date','call_closed_date_bst','call_closed_date_time','call_closed_date_time_bst','date_time_last_modified','date_time_last_modified_bst','date_time_sla_warning','date_time_sla_warning_bst','date_time_sla_violation','date_time_sla_violation_bst','date_time_manual_closed','date_time_manual_closed_bst','manual_closed___system_closed_date','time_taken']
                     , "date_scope_field":"call_opened_time" 
                     },
