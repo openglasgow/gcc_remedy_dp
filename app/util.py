@@ -180,7 +180,8 @@ class Util(object):
           rs = self.gen_session('remote')
           db_connection = rs.connection()
         except:
-          return(e)
+          e = sys.exc_info()[0]
+          print(e)
           sleep(1)
           timeout_counter += 1
           if timeout_counter >= timeout:

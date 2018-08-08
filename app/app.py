@@ -34,7 +34,7 @@ def requires_auth(f):
 def schedule():
   # get post data as json
   body = request.get_json()
-  if set(body.keys()).issubset(['api', 'connection', 'model']):
+  if set(['api', 'connection', 'model']).issubset(body.keys()):
     crawler = BoCrawler(body['api'], body['connection'], eval(body['model']))
 
   if 'batch_delta' in body.keys():

@@ -140,8 +140,8 @@ class RemedyCase(Base):
     product_type = Column(String)
     summary = Column(String)
     def __repr__(self):
-        return "<RemedyCase(id = '%s', assigned='%s', topic='%s'>" % \
-               (self.id, self.assigned_to, self.call_topic_category_1)
+        return "<RemedyCase(id = '%s', assigned='%s', category_1='%s', call_opened_date='%s', date_time_last_modified='%s'>" % \
+               (self.id, self.assigned_to, self.call_topic_category_1, self.call_opened_date_time, self.date_time_last_modified)
 
 class ArchiveCase(Base):
     __tablename__ = 'archive_cases'
@@ -257,8 +257,8 @@ class ArchiveCase(Base):
     caller_second_name = Column(String)
     status_code  = Column(String)
     def __repr__(self):
-        return "<ArchiveCase(id = '%s', assigned='%s', topic='%s'>" % \
-               (self.id, self.assigned_to, self.call_topic_category_1)
+        return "<ArchiveCase(id = '%s', assigned='%s', category_1='%s', call_opened_date='%s', date_time_last_modified='%s'>" % \
+               (self.id, self.assigned_to, self.call_topic_category_1, self.original_create_time, self.date_time_last_modified)
 
 
 class RemedyTest(Base):
@@ -394,8 +394,8 @@ class RemedyTest(Base):
     product_type = Column(String)
     summary = Column(String)
     def __repr__(self):
-        return "<RemedyTest(id = '%s', assigned='%s', topic='%s'>" % \
-               (self.id, self.assigned_to, self.call_topic_category_1)
+        return "<RemedyTest(id = '%s', assigned='%s', category_1='%s', call_opened_date='%s', date_time_last_modified='%s'>" % \
+               (self.id, self.assigned_to, self.call_topic_category_1, self.call_opened_date_time, self.date_time_last_modified)
 
 class ArchiveTest(Base):
     __tablename__ = 'archive_test'
@@ -511,8 +511,8 @@ class ArchiveTest(Base):
     caller_second_name = Column(String)
     status_code  = Column(String)
     def __repr__(self):
-        return "<ArchiveTest(id = '%s', assigned='%s', topic='%s'>" % \
-               (self.id, self.assigned_to, self.call_topic_category_1)
+        return "<ArchiveTest(id = '%s', assigned='%s', category_1='%s', call_opened_date='%s', date_time_last_modified='%s'>" % \
+               (self.id, self.assigned_to, self.call_topic_category_1, self.original_create_time, self.date_time_last_modified)
 
 ### Get or create object
 def get_or_create(session, model, **kwargs):

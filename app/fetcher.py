@@ -34,8 +34,8 @@ class BoFetcher(object):
       # Parse wsdl payload
       parsed_xml = etree.fromstring(self.wsdl_payload)
       #update from date
-      parsed_xml.findall(".//{%s}%s" % (self.settings[self.api]['namespace'], self.settings[self.api]['start_selector']))[0].text = self.from_datetime
-      parsed_xml.findall(".//{%s}%s" % (self.settings[self.api]['namespace'], self.settings[self.api]['end_selector']))[0].text = self.to_datetime
+      parsed_xml.findall(".//{%s}%s" % (self.conf['namespace'], self.conf['start']))[0].text = self.from_datetime
+      parsed_xml.findall(".//{%s}%s" % (self.conf['namespace'], self.conf['end']))[0].text = self.to_datetime
       # back to string
       config_xml_string = etree.tostring(parsed_xml, encoding="utf8", method="xml")
       return(config_xml_string)

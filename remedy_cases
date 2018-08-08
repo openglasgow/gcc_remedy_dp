@@ -1,0 +1,647 @@
+\dt
+drop table affiliates;
+\dt
+drop table affiliates;
+drop table affiliates;
+\dt
+\dt
+drop table affiliates;
+drop table remedy_cases;
+\dt
+select * from remedy_cases;
+select * from remedy_cases;
+select * from remedy_cases;
+select count(*) from remedy
+;
+select count(*) from remedy_cases;
+select * from remedy_cases order by call_opened_date_time DESC limit(2)
+;
+select * from remedy_cases
+;
+select count(8) from remedy_cases
+;
+select count(8) from remedy_cases
+;
+delete * from remedy_cases;
+delete from remedy_cases;
+select * from remedy_cases;
+select * from remedy_cases;
+select count(*) from remedy_cases;
+select count(*) from remedy_cases
+;
+select * from remedy_cases;
+select count(*) from remedy_cases;
+select count(*) from remedy_cases;
+delete from remedy_cases;
+delete from remedy_cases;
+select count(*) from remedy_cases;
+select count(*) from remedy_cases;
+select count(*) from remedy_cases;
+create table archive;
+select * from archive_cases;
+\d
+select * from archive_case;
+select count(*) from archive_case;
+select count(*) from archive_case;
+select count(*) from archive_cases;
+\d
+select count(*) from archive_cases;
+select count(*) from archive_cases;
+select count(*) from archive_cases;
+select count(*) from archive_cases;
+delete from archive_cases;
+select count(*) from archive_cases;
+select count(*) from archive_cases;
+select count(*) from archive_cases;
+select count(*) from archive_cases;
+select * from archive_cases order by original_create_date desc limit(5);\l+ remedy
+select * from archive_cases order by original_create_date asc limit(5);
+select count(*) from archive_cases;
+\l+ remedy
+\l+ remedy
+/dt
+;
+\dt
+select * from complaint_cases
+;
+select count(*) from remedy_cases
+;
+select count(*) from archive_cases;
+select count(*) from archive_cases;
+select count(*) from archive_cases;
+select count(*) from archive_cases;
+\;+
+;
+\l+
+\d
+select count(*) from archive_cases;
+select count(*) from archive_cases;
+select count(*) as total_rows from archive_cases  group by Year(original_create_date);
+select Year(`original_create_date`),  count(*) as total_rows from archive_cases  group by Year(`original_create_date`);
+select extract(year from timestamp `original_create_date`) as year, count(*) from archive_cases group by year;
+select date_trunc('year', original_create_date) as year, count(*) from archive_cases group_by year;
+select to_char(original_create_date, 'YYYY') as year, count(*) from archive_cases where group by year;
+select to_char(original_create_date, 'YYYY') as year, count(*) from archive_cases group by year;
+select to_char(original_create_date, 'YYYY') as year, count(*) from archive_cases group by year order year;
+select to_char(original_create_date, 'YYYY') as year, count(*) from archive_cases group by year order by year desc;
+select to_char(call_opened_date, 'YYYY') as year, count(*) from archive_cases group by year order by year desc;
+\l+
+\l
+\ls
+\d
+select count(*) from complaint_cases
+;
+drop complaint_cases;
+drop complaint_cases from remedy;
+drop table complaint_cases;
+alter table remedy cases rename complaint_cases;
+alter table remedy_cases rename complaint_cases;
+alter table remedy_cases rename to complaint_cases;
+\d
+alter table remedy_cases_id_seq rename to complaint_cases_id_seq;
+/d
+\d
+;
+select count(*) from archive_cases
+;
+\q
+'u
+'
+\u
+\u
+\users
+\dt
+\l
+:q
+\q
+\deu
+\du
+\q
+\dt
+\l
+\q
+exit
+\q
+\q
+\q
+\d
+exit
+\q
+\q
+\d
+select * from archive_cases limit 1;
+\q
+\q
+\q
+select count(*) from test_cases;
+\d
+select count(*) from remedy_cases;
+\d+ remedy_cases;
+\q
+\dt+
+select count(*) from remedy_cases;
+\q
+CREATE INDEX caller_title_idx ON remedy_cases(caller_title);
+CREATE INDEX caller_first_name_idx ON remedy_cases(caller_first_name);
+CREATE INDEX caller_second_name_idx ON remedy_cases(caller_second_name);
+\dt
+\dt+
+trunace table remedy_cases;
+\w
+\q
+\q
+\dt+
+\dt+
+quit
+\q
+\d remedy_cases;
+CREATE INDEX call_opened_time_idx ON remedy_cases(call_opened_time);
+CREATE INDEX call_opened_time_idx ON remedy_cases(call_opened_time);
+\q
+\l
+\q
+select count(*) from remedy_cases limit 1;
+select * from remedy_cases where call_opened_date > '2018-01-01' and call_opened_date < '2018-01-05' limit 1;
+select * from remedy_cases where call_opened_date > '2018-01-01' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3 limit 2;
+select count(*) from remedy_cases where call_opened_date > '2018-01-01' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3 limit 2;
+select call_topic_category_1, call_topic_category_2, call_topic_category_3 count(*) from remedy_cases where call_opened_date > '2018-01-01' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3 limit 2;
+select call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date > '2018-01-01' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3 limit 2;
+select date_trunc('day', call_opened_date) as 'day', call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date > '2018-01-01' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day;
+select date_trunc('day', call_opened_date) 'day', call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date > '2018-01-01' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day;
+select date_trunc('day', call_opened_date) "day", call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date > '2018-01-01' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day;
+select date_trunc('day', call_opened_date) "day", call_topic, call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date > '2018-01-01' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, call_topic;
+\d remedy_cases;
+select date_trunc('day', call_opened_date) "day", host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date > '2018-01-01' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, host_department;
+select date_trunc('day', call_opened_date) "day", host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date > '2018-01-01' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, host_department order by day;
+select date_trunc('day', call_opened_date) "day", host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date > '2018-01-01' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, host_department order by day, host_department;
+select date_trunc('day', call_opened_date) "day", host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date > '2018-01-01' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, host_department order by count;
+select date_trunc('day', call_opened_date) "day", host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date > '2018-01-01' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, host_department order by count desc;
+select date_trunc('day', call_opened_date) "day", host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date > '2018-01-04' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, host_department order by count desc;
+select date_trunc('day', call_opened_date) "day", host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date >= '2018-01-04' and call_opened_date <= '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, host_department order by count desc;
+select date_trunc('day', call_opened_date) "day", host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date >= '2018-01-04' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, host_department order by count desc;
+select date_trunc('day', call_opened_date) "day", host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date >= '2018-01-04' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, host_department order by host_department desc;
+select date_trunc('day', call_opened_date) "day", host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date >= '2018-01-04' and call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, host_department order by host_department asc;
+select date_trunc('day', call_opened_date) "day", host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date >= '2018-01-20' and call_opened_date < '2018-01-21' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, host_department order by host_department asc;
+select call_opened_time, host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3 from remedy_cases order by call_opened_time desc limit 10;
+select call_opened_time, host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3 from remedy_cases order by call_opened_time asc limit 10;
+select original_create_time, host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3 from remedy_cases order by original_create_time asc limit 10;
+\d remedy_cases;
+create index call_opened_time_idx on remedy_cases(call_opened_time);
+\d remedy_cases;
+select call_opened_time, host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3 from remedy_cases order by call_opened_time desc limit 10;
+select original_create_time, host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3 from remedy_cases order by original_create_time asc limit 10;
+select original_create_time, host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3 from remedy_cases order by call_opened_date limit 10;
+select call_opened_time, host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3 from remedy_cases order by call_opened_time desc limit 10;
+select call_opened_time, host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3 from remedy_cases order by call_opened_time desc limit 11;
+select call_opened_time, host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3 from remedy_cases order by call_opened_time desc limit 50;
+COPY select call_opened_time, host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3 from remedy_cases order by call_opened_time desc limit 50 to './live_view.csv' delmiter ',' csv header;
+COPY (select call_opened_time, host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3 from remedy_cases order by call_opened_time desc limit 50) to './live_view.csv' delmiter ',' csv header;
+COPY (select call_opened_time, host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3 from remedy_cases order by call_opened_time desc limit 50) to './live_view.csv' delimiter ',' csv header;
+COPY (select call_opened_time, host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3 from remedy_cases order by call_opened_time desc limit 50) to '/users/devonwalshe/desktop/live_view.csv' delimiter ',' csv header;
+select date_trunc('day', call_opened_date) "day", host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date >= '2018-01-20' and call_opened_date < '2018-01-21' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, host_department order by host_department asc;
+copy (select date_trunc('day', call_opened_date) "day", host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date >= '2018-01-20' and call_opened_date < '2018-01-21' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, host_department order by host_department asc) to '/users/devonwalshe/desktop/aggregated_view.csv' delimiter ',' CSV header'
+;
+'
+;
+copy (select date_trunc('day', call_opened_date) "day", host_department, call_topic_category_1, call_topic_category_2, call_topic_category_3, count(*) from remedy_cases where call_opened_date >= '2018-01-20' and call_opened_date < '2018-01-21' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, host_department order by host_department asc) to '/users/devonwalshe/desktop/aggregated_view.csv' delimiter ',' CSV header;
+\q
+\l
+\c traffcom
+\d
+\u
+\l_
+\l+
+\d
+\q
+\l
+\d+
+select service_request_log, length(service_request_log) as 'length' from remedy_cases order by length desc limit 10;
+select service_request_log, length(service_request_log) as length from remedy_cases order by length desc limit 10;
+select service_request_log from remedy_cases limit 10;
+select service_request_log, length(service_request_log) as length from remedy_cases where length is not null order by length desc  limit 10;
+select service_request_log, length(service_request_log) as len from remedy_cases where len is not null order by length desc  limit 10;
+select service_request_log, length(service_request_log) as len from remedy_cases where length(service_request_log) is not null order by length desc  limit 10;
+select service_request_log, length(service_request_log) as len from remedy_cases where length(service_request_log) is not null order by len desc  limit 10;
+select call_id, service_request_log, length(service_request_log) as len from remedy_cases where length(service_request_log) is not null order by len desc  limit 10;
+select call_id, service_request_log, length(details) as len from remedy_cases where length(details) is not null order by len desc  limit 10;
+select count(*) from remedy_cases where length(details) > 4000;
+select count(*) from remedy_cases where length(details) == 4000;
+select count(*) from remedy_cases where length(details) = 4000;
+eixt
+exit
+\q
+\l
+\d
+\dt+
+\ds
+\sy
+\dt+
+select * from remedy_test limit 10;
+select * from archive_test limit 10;
+\q
+truncate table archive_test
+;
+exit
+\q
+select * from remedy_cases order by call_opened_date desc limit 1
+;
+select call_id, original_create_time from remedy_archive order by call_opened_date desc limit 1;
+select call_id, original_create_time from archive_cases order by call_opened_date desc limit 1;
+select call_id, original_create_time call_opened_date_time, from archive_cases order by call_opened_date desc limit 1;
+select call_id, original_create_time call_opened_date_time from archive_cases order by call_opened_date desc limit 1;
+select call_id, original_create_time, call_opened_date_time from archive_cases order by call_opened_date desc limit 1;
+select call_id, original_create_time, call_opened_date_time from archive_cases order by call_opened_date desc limit 10;
+select call_id, original_create_time, call_opened_date_time from archive_cases order by original_create_time desc limit 10;
+truncate table remedy_test;
+select call_id, call_opened_date_time from remedy_test order by call_opened_date_time desc limit 10;
+select call_id, call_opened_date_time from remedy_test where call_opened_date_time is not null order by call_opened_date_time desc limit 10;
+\d remedy_test
+select * from remedy_test where call_opened_date_time is not null order by call_opened_date_time desc limit 10;
+select * from remedy_test limit 10;
+select call_opened_time from remedy_test limit 10;
+select call_opened_date from remedy_test limit 10;
+truncate table remedy_test
+;
+select call_id, call_opened_date_time from remedy_test order by call_opened_date_time desc limit 10;
+select call_id, call_opened_date_time from remedy_test order by call_opened_date_time desc limit 10;
+select call_id, call_opened_date_time from remedy_test order by call_opened_date_time asc limit 10;
+select call_id, original_create_time from archive cases order by original_create_time asc limit 10;
+select call_id, original_create_time from archive_cases order by original_create_time asc limit 10;
+select call_id, call_opened_date_time from remedy_test order by call_opened_date_time asc limit 10;
+select call_id, call_opened_date_time from remedy_test order by call_opened_date_time desc limit 10;
+select call_id, call_opened_date_time from remedy_test order by call_opened_date_time desc limit 10;
+\d archive_test
+select * into merged_cases from archive_cases limit 50;
+alter table merged_cases 
+  ADD COLUMN property_type varchar, 
+  ADD COLUMN agency_ref varchar, 
+  ADD COLUMN service_add_post_code varchar, 
+  ADD COLUMN niv_grading varchar, 
+  ADD COLUMN opt_out_reason varchar, 
+  ADD COLUMN other_reason varchar, 
+  ADD COLUMN calendar_code varchar, 
+  ADD COLUMN dangerous_defect varchar, 
+  ADD COLUMN avoiding_action varchar, 
+  ADD COLUMN care_group varchar, 
+  ADD COLUMN make varchar, 
+  ADD COLUMN permit_zone varchar, 
+  ADD COLUMN vrm varchar, 
+  ADD COLUMN request_printed varchar, 
+  ADD COLUMN mcs_call_assignment varchar, 
+  ADD COLUMN opening_hours varchar, 
+  ADD COLUMN contact_mobile varchar, 
+  ADD COLUMN product_type varchar, 
+  ADD COLUMN summary varchar;
+select call_id, call_opened_date_time, original_create_time from merged_cases limit 10;
+select call_id, call_opened_date_time, call_closed_date_time  original_create_time from merged_cases limit 10;
+select call_id, call_opened_date_time, call_closed_date_time,  original_create_time from merged_cases limit 10;
+select call_topic,  call_id, call_opened_date_time, call_closed_date_time,  original_create_time from merged_cases limit 10;
+\d merged_cases;
+select call_topic, call_id, call_opened_date_time, call_closed_date_time,  original_create_time, date_time_last_modified from merged_cases limit 10;
+select call_topic, call_id, call_opened_date_time, call_closed_date_time,  original_create_time, date_time_last_modified, date_time_sla_violation from merged_cases limit 10;
+UPDATE merged_cases SET call_opened_date_time = original_create_time;
+select call_topic, call_id, call_opened_date_time, call_closed_date_time,  original_create_time, date_time_last_modified, date_time_sla_violation from merged_cases limit 10;
+truncate table merged_cases;
+select * into merged_cases from archive_cases;
+drop table merged_cases;
+drop table merged_cases;
+select * into merged_cases from archive_cases;
+alter table merged_cases 
+  ADD COLUMN property_type varchar, 
+  ADD COLUMN agency_ref varchar, 
+  ADD COLUMN service_add_post_code varchar, 
+  ADD COLUMN niv_grading varchar, 
+  ADD COLUMN opt_out_reason varchar, 
+  ADD COLUMN other_reason varchar, 
+  ADD COLUMN calendar_code varchar, 
+  ADD COLUMN dangerous_defect varchar, 
+  ADD COLUMN avoiding_action varchar, 
+  ADD COLUMN care_group varchar, 
+  ADD COLUMN make varchar, 
+  ADD COLUMN permit_zone varchar, 
+  ADD COLUMN vrm varchar, 
+  ADD COLUMN request_printed varchar, 
+  ADD COLUMN mcs_call_assignment varchar, 
+  ADD COLUMN opening_hours varchar, 
+  ADD COLUMN contact_mobile varchar, 
+  ADD COLUMN product_type varchar, 
+  ADD COLUMN summary varchar;
+select call_opened_time, call_opened_date_time from merged_cases limit 10;
+select call_opened_time, call_opened_date_time from merged_cases where call_opened_time != call_opened_date_time limit 10;
+select count(*) from remedy_cases;
+select count(*) from remedy_test;
+select date_trunc('month', original_create_time) 'month', count(*) from archive_cases group by month order by month desc;
+select date_trunc("month", original_create_time) "Month", count(*) from archive_cases group by month order by month desc;
+select date_trunc('month', original_create_time) "Month", count(*) from archive_cases group by month order by month desc;
+SELECT date_trunc('day', call_opened_date) "day", 
+       host_department, 
+       call_topic_category_1, 
+       call_topic_category_2, 
+       call_topic_category_3, 
+       count(*)
+FROM remedy_cases 
+WHERE call_opened_date >= '2018-01-04' 
+AND call_opened_date < '2018-01-05' group by call_topic_category_1, call_topic_category_2, call_topic_category_3, day, host_department order by host_department asc;
+select date_trunc('month' original_create_time) from archive_cases group by date_trunc('month' original_create_time) limit 10;
+select date_trunc('month', 'original_create_time') from archive_cases group by date_trunc('month' original_create_time) limit 10;
+select date_trunc('month' original_create_time) from archive_cases group by date_trunc('month', original_create_time) limit 10;
+select date_trunc('month', original_create_time) from archive_cases group by date_trunc('month', original_create_time) limit 10;
+select date_trunc('month', original_create_time) "month" from archive_cases group by month limit 10;
+select date_trunc('month', original_create_time) "month" from archive_cases where original_create_time > 2016-12-01 group by month limit 10;
+select date_trunc('month', original_create_time) "month" from archive_cases where original_create_time > '2016-12-01' group by month limit 10;
+select date_trunc('month', original_create_time) "month", count(*) from archive_cases where original_create_time > '2016-12-01' group by month limit 10;;9D
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select date_trunc('month', original_create_time) "month", count(*) from archive_cases group by month order by month desc;
+select date_trunc('month', call_opened_date_time) "month", count(*) from remedy_test group by month order by month desc;
+select date_trunc('week', call_opened_date_time) "month", count(*) from remedy_test group by week order by month desc;
+select date_trunc('week', call_opened_date_time) "week", count(*) from remedy_test group by week order by month desc;
+select date_trunc('week', call_opened_date_time) "week", count(*) from remedy_test group by week order by week desc;
+truncate table archive_test;
+select date_trunc('week', call_opened_date_time) "week", count(*) live_count from remedy_test group by week order by week desc;
+select date_trunc('week', call_opened_date_time) "week", count(*) live_count from remedy_test group by week order by week desc;select * from (select date_trunc('week', call_opened_date_time) "week", count(*) live_count from remedy_test group by week order by week desc) as live
+select * from (select date_trunc('week', call_opened_date_time) "week", count(*) live_count from remedy_test group by week order by week desc) as live
+left join (select date_trunc('week', call_opened_date_time) "week", count(*) archive_count from archive_test group by week order by week desc) as archive on archive.week=live.week;
+select * from (select date_trunc('week', call_opened_date_time) "week", count(*) live_count from remedy_test group by week order by week desc) as live
+left join (select date_trunc('week', call_opened_date_time) "week", count(*) archive_count from archive_test group by week order by week desc) as archive on archive.week=live.week;
+select live.week, live_count, archive_count from (select date_trunc('week', call_opened_date_time) "week", count(*) live_count from remedy_test group by week order by week desc) as live
+left join (select date_trunc('week', call_opened_date_time) "week", count(*) archive_count from archive_test group by week order by week desc) as archive on archive.week=live.week;
+select count(*) from archive_test;
+select live.week, live_count, archive_count from (select date_trunc('week', call_opened_date_time) "week", count(*) live_count from remedy_test group by week order by week desc) as live;
+left join (select date_trunc('week', original_create_time) "week", count(*) archive_count from archive_test group by week order by week desc) as archive on archive.week=live.week;
+select live.week, live_count, archive_count from (select date_trunc('week', call_opened_date_time) "week", count(*) live_count from remedy_test group by week order by week desc) as live
+left join (select date_trunc('week', original_create_time) "week", count(*) archive_count from archive_test group by week order by week desc) as archive on archive.week=live.week;
+select live.week, live_count, archive_count from (select date_trunc('week', call_opened_date_time) "week", count(*) live_count from remedy_test group by week order by week desc) as live
+left join (select date_trunc('week', original_create_time) "week", count(*) archive_count from archive_test group by week order by week desc) as archive on archive.week=live.week;
+select live.week, live_count, archive_count from (select date_trunc('week', call_opened_date_time) "week", count(*) live_count from remedy_test group by week order by week desc) as live
+inner join (select date_trunc('week', original_create_time) "week", count(*) archive_count from archive_test group by week order by week desc) as archive on archive.week=live.week;
+select live.week, live_count, archive_count from (select date_trunc('week', call_opened_date_time) "week", count(*) live_count from remedy_test group by week order by week desc) as live
+inner join (select date_trunc('week', original_create_time) "week", count(*) archive_count from archive_test group by week order by week desc) as archive on archive.week=live.week;
+select call_opened_date_time, original_create_time from archive_cases limit 10;
+select call_opened_date_time, original_create_time from archive_cases order by original_create_time desc limit 10;
+select call_opened_date_time, original_create_time from archive_test order by original_create_time desc limit 10;
+select call_opened_date_time, call_closed_date_time, original_create_time from archive_test order by original_create_time desc limit 10;
+select call_opened_date_time, call_closed_date_time, original_create_time from archive_test where original_create_time > '2017-09-06' order by original_create_time desc limit 10;
+select call_opened_date_time, call_closed_date_time, original_create_time from archive_test where original_create_time > '2017-09-06' order by original_create_time asc limit 10;
+select call_id, call_opened_date_time, call_closed_date_time, original_create_time from archive_test where original_create_time > '2017-09-06' order by original_create_time asc limit 10;
+select call_id, call_opened_date_time, call_closed_date_time, original_create_time from remedy_test where original_create_time > '2017-09-06' order by original_create_time asc limit 10;
+select call_id, call_opened_date_time, call_closed_date_time, original_create_time from remedy_test where original_create_time > '2017-09-06' order by call_opened_date_time asc limit 10;
+select call_id, call_opened_date_time, call_closed_date_time, original_create_time from remedy_test where call_opened_time > '2017-09-06' order by call_opened_date_time asc limit 10;
+select call_id, call_opened_date_time, call_closed_date_time, original_create_time from remedy_test where call_opened_date_time > '2017-09-06' order by call_opened_date_time asc limit 10;
+select call_id, call_opened_date_time, call_closed_date_time, original_create_time from archive_test where original_create_time > '2017-09-06' order by original_create_time asc limit 10;
+select call_id, call_opened_date_time, call_closed_date_time, original_create_time from remedy_test where call_opened_date_time > '2018-09-06' order by call_opened_date_time asc limit 10;
+select call_id, call_opened_date_time, call_closed_date_time, original_create_time from remedy_test where call_opened_date_time > '2018-09-06' order by call_opened_date_time asc limit 10;
+select live.week, live_count, archive_count from (select date_trunc('week', call_opened_date_time) "week", count(*) live_count from remedy_test group by week order by week desc) as live
+inner join (select date_trunc('week', original_create_time) "week", count(*) archive_count from archive_test group by week order by week desc) as archive on archive.week=live.week;
+select call_opened_date_time from remedy_test order by call_opened_date_time desc limit 10;
+select original_create_time from archive_test order by original_create_time desc limit 10;
+select rt.call_id rt_call_id, rt.call_opened_date_time rt_opened, rt.call_closed_date_time rt_closed, at.call_id at_call_id, at.original_create_date at_opened, at.call_closed_date_time at_closed from remedy_test rt left join archive_test at on rt.call_id=at.call_id order by rt_call_id desc limit 10; 
+select rt.call_id rt_call_id, rt.call_opened_date_time rt_opened, rt.call_closed_date_time rt_closed, at.call_id at_call_id, at.original_create_date at_opened, at.call_closed_date_time at_closed from remedy_test rt inner join archive_test at on rt.call_id=at.call_id order by rt_call_id desc limit 10; 
+\d merged_caes
+\d merged_cases
+select original_create_time, call_opened_date_time, call_id from merged_cases order by call_opened_date_time desc limit 10;
+select original_create_time, call_opened_date_time, call_id from merged_cases order by original_create_time desc limit 10;
+select * into test_merge from archive_cases limit 10;
+select * from test_merge
+;
+select count(*) from test_merge
+;
+alter table test_merge 
+  ADD COLUMN property_type varchar, 
+  ADD COLUMN agency_ref varchar, 
+  ADD COLUMN service_add_post_code varchar, 
+  ADD COLUMN niv_grading varchar, 
+  ADD COLUMN opt_out_reason varchar, 
+  ADD COLUMN other_reason varchar, 
+  ADD COLUMN calendar_code varchar, 
+  ADD COLUMN dangerous_defect varchar, 
+  ADD COLUMN avoiding_action varchar, 
+  ADD COLUMN care_group varchar, 
+  ADD COLUMN make varchar, 
+  ADD COLUMN permit_zone varchar, 
+  ADD COLUMN vrm varchar, 
+  ADD COLUMN request_printed varchar, 
+  ADD COLUMN mcs_call_assignment varchar, 
+  ADD COLUMN opening_hours varchar, 
+  ADD COLUMN contact_mobile varchar, 
+  ADD COLUMN product_type varchar, 
+  ADD COLUMN summary varchar;
+INSERT INTO test_merge
+  SELECT *
+  FROM archive_test;
+select count(*) from test_merge;
+INSERT INTO test_merge
+  SELECT *
+  FROM remedy_test limit 10;
+\d+ test_merge
+\d remedy_test;
+\d+ test_merge
+\d remedy_test;
+\l
+\d
+drop table test_merge;
+select original_create_time, call_id from merge_cases order by original_create_time desc limit 10;
+select original_create_time, call_id from merged_cases order by original_create_time desc limit 10;
+select original_create_time, call_id from archive_test order by original_create_time asc limit 10;
+INSERT INTO merged_cases
+  SELECT * FROM archive_test;
+select call_id, property_type, original_create_time from merged_cases order by original_create_time desc limit 10;
+select call_id, status_code, property_type, original_create_time from merged_cases order by original_create_time desc limit 10;
+UPDATE merged_cases SET call_opened_date_time = original_create_time;
+INSERT INTO merged_cases (property_type, agency_ref, assignment_officer, call_id, call_type, assigned_to, last_log_entry, bulk_uplift_date, est_resp_date, est_resp_date_bst, pan, pen, cust_sat_call_back, route, caller_type, date_1st_contact_made, date_1st_contact_made_bst, date_paid, date_paid_bst, eps_closure_code, agent_login_id, issue_count, ward, ward_no__decoded_from_ward_name_, ward_no__directly_from_database_, host_department, priority, ralf_priority, call_topic, call_topic_category_1, call_topic_category_2, call_topic_category_3, call_summary, caller_geographic_location, caller_name, details, location_description, call_agent, call_opened_date, call_opened_date_bst, call_opened_date_time, call_opened_time, call_opened_date_time_bst, call_opened_time_bst, call_closed_date, call_closed_date_bst, call_closed_date_time, call_closed_date_time_bst, call_resolved, call_resolved_bst, sla_status, source_information, transfer_type, service_add_email_address, service_add_name_num, service_add_phone, contact_add_town, service_address, service_add_post_code, request_status, usrn, date_time_last_modified, date_time_last_modified_bst, date_time_sla_warning, date_time_sla_warning_bst, date_time_sla_violation, date_time_sla_violation_bst, last_modified_by, service_request_log, date_time_manual_closed, date_time_manual_closed_bst, refusal_list, foi_closure_code, lay_assessors_pin_no, charge_code, item_quantity, invoice_address, manual_closed___system_closed_date, closure_code, complaint_justified, private_individual, business, media, academic, charity__lobby_or_campaign, msp__med__mp_or_peers, other_groups, applicant_ethnic_origin, disability_info, other_communication_method, neighbourhood_code, cpp_code, chcp_code, tag_id, surface_type, meterage_quantity, repair_type, time_taken, utility, payment_authorised_received, niv_grading, contact_premise_no, contact_premise_name, uprn, opt_out_reason, other_reason, calendar_code, number_completed, dangerous_defect, avoiding_action, caller_title, caller_first_name, caller_second_name, status_code , care_group, make, permit_zone, vrm, request_printed, mcs_call_assignment, opening_hours, contact_mobile, product_type, summary)
+  SELECT                  property_type, agency_ref, assignment_officer, call_id, call_type, assigned_to, last_log_entry, bulk_uplift_date, est_resp_date, est_resp_date_bst, pan, pen, cust_sat_call_back, route, caller_type, date_1st_contact_made, date_1st_contact_made_bst, date_paid, date_paid_bst, eps_closure_code, agent_login_id, issue_count, ward, ward_no__decoded_from_ward_name_, ward_no__directly_from_database_, host_department, priority, ralf_priority, call_topic, call_topic_category_1, call_topic_category_2, call_topic_category_3, call_summary, caller_geographic_location, caller_name, details, location_description, call_agent, call_opened_date, call_opened_date_bst, call_opened_date_time, call_opened_time, call_opened_date_time_bst, call_opened_time_bst, call_closed_date, call_closed_date_bst, call_closed_date_time, call_closed_date_time_bst, call_resolved, call_resolved_bst, sla_status, source_information, transfer_type, service_add_email_address, service_add_name_num, service_add_phone, contact_add_town, service_address, service_add_post_code, request_status, usrn, date_time_last_modified, date_time_last_modified_bst, date_time_sla_warning, date_time_sla_warning_bst, date_time_sla_violation, date_time_sla_violation_bst, last_modified_by, service_request_log, date_time_manual_closed, date_time_manual_closed_bst, refusal_list, foi_closure_code, lay_assessors_pin_no, charge_code, item_quantity, invoice_address, manual_closed___system_closed_date, closure_code, complaint_justified, private_individual, business, media, academic, charity__lobby_or_campaign, msp__med__mp_or_peers, other_groups, applicant_ethnic_origin, disability_info, other_communication_method, neighbourhood_code, cpp_code, chcp_code, tag_id, surface_type, meterage_quantity, repair_type, time_taken, utility, payment_authorised_received, niv_grading, contact_premise_no, contact_premise_name, uprn, opt_out_reason, other_reason, calendar_code, number_completed, dangerous_defect, avoiding_action, caller_title, caller_first_name, caller_second_name, status_code , care_group, make, permit_zone, vrm, request_printed, mcs_call_assignment, opening_hours, contact_mobile, product_type, summary
+  FROM remedy_test;
+select count(*) from merged_cases;
+select date_trunc('month', call_opened_date_time) "month", count(*) live_count from remedy_test group by month order by month desc
+;
+select date_trunc('month', call_opened_date_time) "month", count(*) live_count from merged_cases group by month order by month desc
+;
+select merged.week, merged_count, remedy_count from (select date_trunc('month', call_opened_date_time) "month", count(*) merged_count from merged_cases group by month order by month desc) as merged
+INNER JOIN (select date_trunc('month', call_opened_date_time) "month", count(*) remedy_count from remedy_cases group by month order by month desc) as remedy on merged.month=remedy.month;
+select merged.month, merged_count, remedy_count from (select date_trunc('month', call_opened_date_time) "month", count(*) merged_count from merged_cases group by month order by month desc) as merged
+INNER JOIN (select date_trunc('month', call_opened_date_time) "month", count(*) remedy_count from remedy_cases group by month order by month desc) as remedy on merged.month=remedy.month;
+select merged.month, merged_count, remedy_count from (select date_trunc('month', call_opened_date_time) "month", count(*) merged_count from merged_cases where distinct(call_id) group by month order by month desc) as merged
+INNER JOIN (select date_trunc('month', call_opened_date_time) "month", count(*) remedy_count from remedy_cases distinct(call_id) group by month order by month desc) as remedy on merged.month=remedy.month;
+select merged.month, merged_count, remedy_count from (select date_trunc('month', call_opened_date_time) "month", count(*) merged_count from (select distinct on (call_id), call_opened_date_time from merged_cases) group by month order by month desc) as merged
+INNER JOIN (select date_trunc('month', call_opened_date_time) "month", count(*) remedy_count from (select distinct on (call_id), call_opened_date_time from remedy_cases) group by month order by month desc) as remedy on merged.month=remedy.month;
+select merged.month, merged_count, remedy_count from (select date_trunc('month', call_opened_date_time) "month", count(*) merged_count from (select distinct call_id, call_opened_date_time from merged_cases) group by month order by month desc) as merged
+INNER JOIN (select date_trunc('month', call_opened_date_time) "month", count(*) remedy_count from (select distinct call_id, call_opened_date_time from remedy_cases) group by month order by month desc) as remedy on merged.month=remedy.month;
+select merged.month, merged_count, remedy_count from (select date_trunc('month', call_opened_date_time) "month", count(*) merged_count from (select distinct call_id, call_opened_date_time from merged_cases) as sq1 group by month order by month desc) as merged
+INNER JOIN (select date_trunc('month', call_opened_date_time) "month", count(*) remedy_count from (select distinct call_id, call_opened_date_time from remedy_cases) as sq2 group by month order by month desc) as remedy on merged.month=remedy.month;
+select * from merged_cases where call_opened_date_time > '2015-01-01';
+select count(*) from merged_cases where call_opened_date_time > '2015-01-01';
+select count(*) from merged_cases where call_opened_date_time > '2015-01-01' AND call_topic_category_1 = 'FOI';
+select count(*) from merged_cases where call_closed_date_time is null; 
+select date_trunc('month', call_opened_date_time) as month, count(*) from merged_cases where call_closed_date_time is null group by month; 
+select date_trunc('month', call_opened_date_time) as month, count(*) from merged_cases where call_closed_date_time is null group by month order by month desc; 
+select count(*), call_topic_category_1 from merged_cases group by call_topic_category_1 sort by count(*) desc;
+select count(*), call_topic_category_1 from merged_cases group by call_topic_category_1 order by count(*) desc;
+select count(*), call_topic_category_1 from merged_cases where call_opened_date_time > '2014-01-01' group by call_topic_category_1 order by count(*) desc;
+select count(*), call_topic_category_1 from merged_cases where call_opened_date_time > '2019-01-01' group by call_topic_category_1 order by count(*) desc;
+select count(*), call_topic_category_1 from merged_cases where call_opened_date_time > '2016-01-01' and call_opened_date_time < '2017-01-01' group by call_topic_category_1 order by count(*) desc;
+select * from remedy_test limit 10;
+select call_id from remedy_test limit 10;
+row
+;
+select call_id, topic from remedy_test limit 10;
+select call_id, call_topic from remedy_test limit 10;
+select call_id, call_topic, vrm from remedy_test limit 10;
+select call_id, call_topic, vrm from remedy_test where call_id = 'RQST00005949825' limit 10;
+fetcher
+;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+exit
+\q
+\d
+select count(*) from remedy_test;
+\d remedy_test;
+exit
+\q
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;select count(*) from merged_cases where call_opened_date > '2015-01-01' and call_opened_date < '2015-06-01';
+select count(*) from merged_cases;
+select date_time_last_modified, call_opened_date, call_id from merged_cases;
+select date_time_last_modified, call_opened_date, call_id from merged_cases limit 10;
+select date_time_last_modified, original_create_date call_opened_date, call_id from merged_cases limit 10;
+select date_time_last_modified, original_create_date, call_opened_date, call_id from merged_cases limit 10;
+select date_time_last_modified, original_create_date, call_opened_date, call_id from merged_cases order by call_opened_date desc limit 10;
+select date_time_last_modified, original_create_date_time, call_opened_date, call_id from merged_cases order by call_opened_date desc limit 10;
+select date_time_last_modified, original_create_time, call_opened_date_time, call_id from merged_cases order by call_opened_date desc limit 10;
+select date_time_last_modified, original_create_time, call_opened_date_time, call_id from merged_cases order by call_opened_date_time desc limit 10;
+select call_topic_category_1, date_time_last_modified, original_create_time, call_opened_date_time, call_id from merged_cases order by call_opened_date_time desc limit 10;
+select call_topic_category_1, date_time_last_modified, original_create_time, call_opened_date_time, call_closed_date_time, call_id from merged_cases order by call_opened_date_time desc limit 10;
+select call_topic_category_1, date_time_last_modified, original_create_time, call_opened_date_time, call_closed_date_time, call_id from merged_cases where call_opened_date_time < date_time_last_modified order by call_opened_date_time desc limit 10;
+select call_topic_category_1, date_time_last_modified, original_create_time, call_opened_date_time, call_closed_date_time, call_id from merged_cases where call_opened_date_time < date_time_last_modified order by date_time_last_modified desc limit 10;
+select call_topic_category_1, date_time_last_modified, original_create_time, call_opened_date_time, call_closed_date_time, call_id from archive_cases where call_opened_date_time < date_time_last_modified order by date_time_last_modified desc limit 10;
+select call_topic_category_1, date_time_last_modified, original_create_time, call_opened_date_time, call_closed_date_time, call_id from archive_cases order by date_time_last_modified desc limit 10;
+select call_topic_category_1, date_time_last_modified, original_create_time, call_opened_date_time, call_closed_date_time, call_id from merged_cases where call_id = RQST00005537078 order by date_time_last_modified desc limit 10;
+select call_topic_category_1, date_time_last_modified, original_create_time, call_opened_date_time, call_closed_date_time, call_id from merged_cases where call_id = 'RQST00005537078' order by date_time_last_modified desc limit 10;
+\d
+\d+
+\d+ merged_cases
+\d merged_cases;
+\d+ 
+select count(*) from merged_cases;
+select count(*) from archive_cases;
+select count(*) from remedy_cases;
+select call_opened_date_time from remedy_cases order by call_opened_date_time limit 10;
+select call_opened_date_time from merged_cases order by call_opened_date_time asc limit 10;
+select call_opened_date_time from merged_cases order by call_opened_date_time desc limit 10;
+select call_opened_date_time from remedy_cases order by call_opened_date_time desc limit 10;
+\dt merged_cases;
+\dt+ merged_cases;
+\d+ merged_cases;
+drop table remedy_cases;
+exit
+\q
+select * from remedy_test limit 10;
+select * from remedy_cases limit 10;
+select count(*) from remedy_cases;
+select count(*) from remedy_test;
+            for id,row in rows.items():
+                row = self.util.parse_dates(row, api_settings[self.api]['date_fields'])
+                row_id = api_settings[self.api]['row_id'].lower()
+                # Get the object if it exists in the DB, or create a new one
+                # TODO check for certain fields being updated 
+                obj = get_or_create(self.session, self.model, **{row_id: id})
+                ### Todo log if created or updated
+                obj = self.session.query(self.model).filter(self.model.id == obj.id).update(row)
+;
+select count(*) from remedy_cases;
+select count(*) from remedy_cases;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+truncate table remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select * from remedy_test;
+select * from remedy_test;
+truncate table remedy_test;
+truncate table remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+truncate table remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+truncate table remedy_test;
+select count(*) from merged_cases where call_opened_date > '2015-01-01' and call_opened_date < '2015-06-01'
+;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select * from remedy_test where call_id = 'RQST00006561240';
+ids
+;
+truncate table remedy_test;
+truncate table remedy_test;
+select * from remedy_test order by date_time_last_modified desc limit 10;
+select * from remedy_test order by date_time_last_modified desc limit 10;
+select date_time_last_modified, call_opened_date_time from remedy_test order by date_time_last_modified desc limit 10;
+bc.crawl()
+;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select count(*) from remedy_test;
+select call_opened_date_time, date_time_last_modified from remedy_test order by call_opened_date_time asc limit 10;
+select call_opened_date_time, date_time_last_modified from remedy_test order by date_time_last_modified asc limit 10;
+select call_opened_date_time, date_time_last_modified from remedy_test order by date_time_last_modified desc limit 10;
+select call_opened_date_time, date_time_last_modified_BST from remedy_test order by date_time_last_modified desc limit 10;
+select call_opened_date_time, date_time_last_modified_BST from remedy_test order by date_time_last_modified_BST desc limit 10;
+select call_opened_date_time_BST, date_time_last_modified_BST from remedy_test order by date_time_last_modified_BST desc limit 10;
+select call_opened_date_time_BST, date_time_last_modified_BST from remedy_test order by call_opened_date_time_BST desc limit 10;
+select call_opened_date_time, date_time_last_modified from remedy_test order by call_opened_date_time asc limit 10;
+select call_id, call_topic_category_1, date_time_last_modified, call_opened_date_time from remedy_test where call_id= 'RQST00006553271';
+select call_id, call_topic_category_1, date_time_last_modified, call_opened_date_time from remedy_test where call_id= 'RQST00006553271';
+\q
+\d remedy_cases;
+CREATE INDEX date_paid_idx ON remedy_cases(date_paid);
+CREATE INDEX call_opened_date_time_idx ON remedy_cases(call_opened_date_time);
+CREATE INDEX call_closed_date_time_idx ON remedy_cases(call_closed_date_time);
+CREATE INDEX date_time_last_modified_idx ON remedy_cases(date_time_last_modified);
+CREATE INDEX date_time_sla_warning_idx ON remedy_cases(date_time_sla_warning);
+CREATE INDEX date_time_sla_violation_idx ON remedy_cases(date_time_sla_violation);
+CREATE INDEX date_time_manual_closed_idx ON remedy_cases(date_time_manual_closed);
+CREATE INDEX original_create_time_idx ON remedy_cases(original_create_time);
+CREATE INDEX call_id_idx ON remedy_cases(call_id);
+CREATE INDEX call_topic_category_1_idx ON remedy_cases(call_topic_category_1);
+CREATE INDEX call_topic_category_2_idx ON remedy_cases(call_topic_category_2);
+CREATE INDEX call_topic_category_3_idx ON remedy_cases(call_topic_category_3);
+CREATE INDEX uprn_idx ON remedy_cases(uprn);
+CREATE INDEX caller_title_idx ON remedy_cases(caller_title);
+CREATE INDEX caller_first_name_idx ON remedy_cases(caller_first_name);
+CREATE INDEX caller_second_name_idx ON remedy_cases(caller_second_name);
+\d remedy_cases;
+select * from remedy_cases where call_id is null limit 10;
+select * from remedy_cases where call_id = '' limit 10;
+self.session.__dict__
+;
+\d remedy_cases
+\s remedy_cases

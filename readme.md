@@ -24,24 +24,27 @@ Installation and usage
 	```
 	
 4. Contact [@devonwalshe](https://www.github.com/devonwalshe) for the configuration payload, which by default looked for in a file at `./config/remedy_wsdl.xml`
-5. Single requests can be run from the command line, outputing JSON to sdout or piped to a file. Longer periods are broken down into batches, written to the DB and results logged. Date format for all the functions, in line with the api format, is Month-Day-Year or `%m-%d-%Y` in standard date parsing flags. Options are:
-	* poll_remedy_api.py
-		* -sd [start date]
-		* -ed [end date]
-		* -w [wsdl file location]
-	* remedy_to_db.py
-		* -sd [start date]
-		* -ed [end date]
-		* -b [batch size in days]
-		* -s [sleep time between in seconds requests to manage server load]
-	
-	#### Examples
-	``` 
-	$ python poll_remedy_api.py -sd 01-01-2017 -ed 01-30-2017 -w config/remedy_wsdl.xml > remedy_jan_2017.json
-	
-	$ python remedy_to_db.py sd 01-01-2017 -ed 01-30-2017 -b 5 -s 5
-	$ tail -f remedy_to_db.log
-	``` 
+
+5. The app exposes two clases, BoFetcher and BoCrawler
+  - BoFetcher sends a single request, configured with a wsdl, and returns a parsed response
+  - BoCrawler sets up a date range to traverse, DB connections, and traverses the date range filling in data
+  - BoCrawler can crawl between two date ranges, or do a 'delta' search, which takes the date of the latest entry of in the DB as start, and time now as end. 
+6. Typical flow in python console
+  `from orm.models import *`
+  `from BoCrawler import *`
+  `crawler = BoCrawler('remedy_update', 'local', RemedyCase, delta=True)`
+  `crawler.crawl()`
+
+
+
+
+
+#### If you are missing archive records
+
+1. Fetch all records from 'archive' api and store in your local DB
+2. drop 'merge' psql table
+3. 
+
 Tunnel config
 ---
 This is the local setup to allow you connect to the remote azure psql instance. There are two components:

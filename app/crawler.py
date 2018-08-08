@@ -4,7 +4,7 @@ import logging
 import sys
 import re
 from .fetcher import BoFetcher
-from config.settings import api_settings, connections, fetch_date_format, parse_date_format
+from config.settings import api_settings, connections, fetch_date_format, parse_date_format, crawl_delay
 from .util import Util
 from .fetcher import BoFetcher
 
@@ -18,6 +18,7 @@ class BoCrawler(object):
         self.api = api
         self.connection = connection
         self.model = model
+        self.delay = crawl_delay
         self.util = Util()
         if connection == "remote":
             self.session = self.util.tunnel_db_connect()
@@ -58,6 +59,8 @@ class BoCrawler(object):
     def crawl(self):
         # Get batched dates from list
         dates_list = self.batch_list
+        # info
+        self.logger.info("Starting crawl from {} to {}".format(dates_list[0][0], dates_list[-1][1]))
         for date_range in dates_list:
             # TODO logging
             self.logger.info("fetching date range {}".format(date_range))
@@ -83,6 +86,10 @@ class BoCrawler(object):
             except:
                 e = sys.exc_info()[0]
                 raise(e)
+            # Pause before the next iteration
+            self.logger.info("pausing for {} seconds".format(self.delay))
+            sleep(self.delay)
+        self.logger.info("All Done!")
 
     def response_to_db(self, response):
         '''
@@ -92,9 +99,15 @@ class BoCrawler(object):
         try:
             row_objects = {id: self.model(**row) for id, row in rows.items()}
 
-            for record in self.session.query(self.model).filter(self.model.call_id.in_(row_objects.keys())).all():
+            for record in self.session.query(self.model).filter(self.model.call_id.in_(row_objects.keys())).distinct(self.model.call_id).all():
                 # Only merge those posts which already exist in the database
-                self.session.merge(row_objects.pop(record.call_id))
+                if record is None:
+                    continue
+                try: 
+                    self.session.merge(row_objects.pop(record.call_id))
+                except KeyError:
+                    self.logger.error("record {} may be duplicated, continuing to next item".format(record))
+                    continue
             # Log updates
             self.logger.debug("{} existing records updated".format(len(rows) - len(row_objects)))
             # Add the rest
